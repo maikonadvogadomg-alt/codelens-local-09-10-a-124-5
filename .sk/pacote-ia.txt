@@ -1,0 +1,4308 @@
+# Pacote do projeto "CodeLens-local-09-10-a-124" para a IA
+# 28 arquivos. Cada um começa com ===== ARQUIVO: caminho =====
+
+## Estrutura
+├── .github/
+│   └── workflows/
+│       ├── teste.yml
+│       └── windows.yml
+├── dist/
+│   ├── assets/
+│   │   ├── index-hxM99Uii.js
+│   │   └── index-YmvJSp3J.css
+│   ├── icons/
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
+│   │   ├── icon.ico.png
+│   │   └── icon.png
+│   ├── favicon.svg
+│   ├── index.html
+│   ├── manifest.json
+│   ├── opengraph.jpg
+│   └── sw.js
+├── lib/
+│   ├── api-client-react/
+│   │   └── index.ts
+│   ├── api-zod/
+│   │   └── index.ts
+│   └── db/
+│       └── index.ts
+├── public/
+│   ├── icons/
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
+│   │   ├── icon.ico.png
+│   │   └── icon.png
+│   ├── favicon.svg
+│   ├── manifest.json
+│   ├── opengraph.jpg
+│   └── sw.js
+├── scripts/
+│   ├── abrir-pronto.mjs
+│   └── iniciar.mjs
+├── server/
+│   ├── lib/
+│   │   ├── devServerRegistry.ts
+│   │   ├── gemini-ponte.ts
+│   │   ├── logger.ts
+│   │   ├── persistFiles.ts
+│   │   ├── shell.ts
+│   │   ├── storage.ts
+│   │   ├── tar.ts
+│   │   └── tts.ts
+│   ├── routes/
+│   │   ├── ai.ts
+│   │   ├── code-assistant.ts
+│   │   ├── code-run.ts
+│   │   ├── dev-server.ts
+│   │   ├── exec.ts
+│   │   ├── files.ts
+│   │   ├── git.ts
+│   │   ├── github.ts
+│   │   ├── health.ts
+│   │   ├── import-github.ts
+│   │   ├── index.ts
+│   │   ├── preview.ts
+│   │   ├── projects.ts
+│   │   ├── settings.ts
+│   │   └── snippets.ts
+│   ├── app.ts
+│   └── index.ts
+├── src/
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── accordion.tsx
+│   │   │   ├── alert-dialog.tsx
+│   │   │   ├── alert.tsx
+│   │   │   ├── aspect-ratio.tsx
+│   │   │   ├── avatar.tsx
+│   │   │   ├── badge.tsx
+│   │   │   ├── breadcrumb.tsx
+│   │   │   ├── button-group.tsx
+│   │   │   ├── button.tsx
+│   │   │   ├── calendar.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── carousel.tsx
+│   │   │   ├── chart.tsx
+│   │   │   ├── checkbox.tsx
+│   │   │   ├── collapsible.tsx
+│   │   │   ├── command.tsx
+│   │   │   ├── context-menu.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   ├── drawer.tsx
+│   │   │   ├── dropdown-menu.tsx
+│   │   │   ├── empty.tsx
+│   │   │   ├── field.tsx
+│   │   │   ├── form.tsx
+│   │   │   ├── hover-card.tsx
+│   │   │   ├── input-group.tsx
+│   │   │   ├── input-otp.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── item.tsx
+│   │   │   ├── kbd.tsx
+│   │   │   ├── label.tsx
+│   │   │   ├── menubar.tsx
+│   │   │   ├── navigation-menu.tsx
+│   │   │   ├── pagination.tsx
+│   │   │   ├── popover.tsx
+│   │   │   ├── progress.tsx
+│   │   │   ├── radio-group.tsx
+│   │   │   ├── resizable.tsx
+│   │   │   ├── scroll-area.tsx
+│   │   │   ├── select.tsx
+│   │   │   ├── separator.tsx
+│   │   │   ├── sheet.tsx
+│   │   │   ├── sidebar.tsx
+│   │   │   ├── skeleton.tsx
+│   │   │   ├── slider.tsx
+│   │   │   ├── sonner.tsx
+│   │   │   ├── spinner.tsx
+│   │   │   ├── switch.tsx
+│   │   │   ├── table.tsx
+│   │   │   ├── tabs.tsx
+│   │   │   ├── textarea.tsx
+│   │   │   ├── toast.tsx
+│   │   │   ├── toaster.tsx
+│   │   │   ├── toggle-group.tsx
+│   │   │   ├── toggle.tsx
+│   │   │   └── tooltip.tsx
+│   │   ├── ai-panel.tsx
+│   │   ├── code-editor.tsx
+│   │   ├── code-viewer.tsx
+│   │   ├── error-boundary.tsx
+│   │   ├── file-tree.tsx
+│   │   ├── git-history-modal.tsx
+│   │   ├── github-conta.tsx
+│   │   ├── github-deploy-modal.tsx
+│   │   ├── layout.tsx
+│   │   ├── packages-panel.tsx
+│   │   ├── preview-panel.tsx
+│   │   ├── terminal-panel.tsx
+│   │   └── theme-provider.tsx
+│   ├── hooks/
+│   │   ├── use-file-ops.ts
+│   │   ├── use-mobile.tsx
+│   │   └── use-toast.ts
+│   ├── lib/
+│   │   └── utils.ts
+│   ├── pages/
+│   │   ├── assistant.tsx
+│   │   ├── home.tsx
+│   │   ├── not-found.tsx
+│   │   ├── playground.tsx
+│   │   ├── project-explorer.tsx
+│   │   └── settings.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── windows/
+│   └── Abrir-CodeLens.bat
+├── .gitignore
+├── .npmrc
+├── index.html
+├── iniciar.bat
+├── iniciar.sh
+├── LEIA-ME.md
+├── package-lock.json
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+
+===== ARQUIVO: .github/workflows/teste.yml =====
+# Teste automático: monta e liga o CodeLens no GitHub e confere se
+# criar projeto, salvar e ler arquivo funcionam. Verde = está tudo certo.
+name: Testar o CodeLens
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  testar:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v5
+      - name: Instalar o Node 22
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Instalar as peças
+        run: npm install --no-audit --no-fund
+      - name: Montar a tela
+        run: npm run build
+      - name: Ligar o servidor e testar
+        env:
+          PORT: "8080"
+          NODE_ENV: production
+        run: |
+          npm start > servidor.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf http://localhost:8080/api/healthz && break; sleep 1; done
+          echo "--- 1. servidor responde"
+          curl -sf http://localhost:8080/api/healthz
+          echo; echo "--- 2. a tela abre"
+          curl -sf http://localhost:8080/ | grep -q '<div id="root">'
+          echo "ok"
+          echo "--- 3. criar projeto"
+          ID=$(curl -sf -X POST -H 'Content-Type: application/json' -d '{"name":"teste","template":"blank"}' http://localhost:8080/api/projects/blank | node -pe 'JSON.parse(require("fs").readFileSync(0)).id')
+          echo "projeto $ID"
+          echo "--- 4. salvar arquivo"
+          curl -sf -X PUT -H 'Content-Type: application/json' -d '{"path":"pasta/ola.txt","content":"Ola, Maikon! teste"}' "http://localhost:8080/api/projects/$ID/files"
+          echo; echo "--- 5. ler arquivo"
+          curl -sf "http://localhost:8080/api/projects/$ID/files?path=pasta/ola.txt" | grep -q "Maikon"
+          echo "ok"
+          echo "--- 6. terminal"
+          curl -sf -X POST -H 'Content-Type: application/json' -d '{"command":"node -v"}' "http://localhost:8080/api/projects/$ID/exec"
+          echo; echo "--- 7. lista de projetos"
+          curl -sf http://localhost:8080/api/projects
+          echo; echo "--- 8. rota que não existe responde JSON (não HTML)"
+          curl -s http://localhost:8080/api/nao-existe | grep -q '"error"'
+          echo "ok"
+          echo; echo "TUDO CERTO ✅"
+      - name: Mostrar o registro do servidor
+        if: always()
+        run: cat servidor.log || true
+===== FIM: .github/workflows/teste.yml =====
+
+===== ARQUIVO: .github/workflows/windows.yml =====
+# Gera o CodeLens PRONTO para Windows: um .zip com tudo dentro (inclusive o
+# Node), que abre com dois cliques sem instalar nada.
+# Diferente da receita da Replit: é montado NO WINDOWS, o app montado é
+# TESTADO antes, e se algo falhar a execução fica VERMELHA (nada de "verde
+# enganando"). No fim, o arquivo fica em "Releases" para baixar.
+name: Gerar app para Windows
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+permissions:
+  contents: write
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v5
+
+      - name: Instalar o Node 22
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Instalar as peças
+        run: npm install --no-audit --no-fund
+
+      - name: Montar a tela
+        run: npm run build
+
+      - name: Tirar o que só servia para montar
+        run: npm prune --omit=dev
+
+      - name: Montar a pasta do app
+        shell: pwsh
+        run: |
+          $out = "CodeLens"
+          New-Item -ItemType Directory $out | Out-Null
+          foreach ($i in "dist","server","lib","public","node_modules","scripts","package.json","tsconfig.json","LEIA-ME.md") {
+            Copy-Item $i -Destination $out -Recurse
+          }
+          New-Item -ItemType Directory "$out/node" | Out-Null
+          Copy-Item (Get-Command node).Source "$out/node/node.exe"
+          Copy-Item "windows/Abrir-CodeLens.bat" $out
+
+      - name: Testar o app montado (do jeito que vai rodar no seu PC)
+        shell: pwsh
+        run: |
+          cd CodeLens
+          $env:NO_BROWSER = "1"
+          $p = Start-Process -FilePath "node\node.exe" -ArgumentList "scripts\abrir-pronto.mjs" -PassThru -NoNewWindow -RedirectStandardOutput ..\app.log -RedirectStandardError ..\app.err
+          $ok = $false
+          for ($i = 0; $i -lt 90; $i++) {
+            try { if ((Invoke-WebRequest http://localhost:8080/api/healthz -UseBasicParsing).StatusCode -eq 200) { $ok = $true; break } } catch {}
+            Start-Sleep 1
+          }
+          if (-not $ok) { Get-Content ..\app.log, ..\app.err; throw "O servidor não ligou" }
+          $html = (Invoke-WebRequest http://localhost:8080/ -UseBasicParsing).Content
+          if ($html -notmatch 'id="root"') { throw "A tela não abriu" }
+          $proj = Invoke-RestMethod -Method Post -ContentType "application/json" -Body '{"name":"teste","template":"blank"}' http://localhost:8080/api/projects/blank
+          Invoke-RestMethod -Method Put -ContentType "application/json" -Body '{"path":"ola.txt","content":"Ola"}' "http://localhost:8080/api/projects/$($proj.id)/files" | Out-Null
+          $f = Invoke-RestMethod "http://localhost:8080/api/projects/$($proj.id)/files?path=ola.txt"
+          if ($f.content -ne "Ola") { throw "Não salvou o arquivo" }
+          $t = Invoke-RestMethod -Method Post -ContentType "application/json" -Body '{"command":"node -v"}' "http://localhost:8080/api/projects/$($proj.id)/exec"
+          $t | ConvertTo-Json -Depth 4
+          taskkill /pid $p.Id /T /F | Out-Null
+          Start-Sleep 2
+          Remove-Item -Recurse -Force dados -ErrorAction SilentlyContinue
+          Write-Host "APP TESTADO ✅"
+
+      - name: Compactar
+        shell: pwsh
+        run: 7z a -tzip -mx=5 CodeLens-Windows.zip CodeLens | Out-Null
+
+      - name: Guardar o arquivo (Artifacts)
+        uses: actions/upload-artifact@v4
+        with:
+          name: CodeLens-Windows
+          path: CodeLens-Windows.zip
+          if-no-files-found: error
+
+      - name: Publicar para baixar (Releases)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "windows-${{ github.run_number }}" CodeLens-Windows.zip \
+            --title "CodeLens para Windows nº ${{ github.run_number }}" \
+            --notes "Baixe o CodeLens-Windows.zip, clique com o botão direito > Extrair tudo, e dê dois cliques em Abrir-CodeLens.bat. Não precisa instalar nada."
+
+      - name: Mostrar o registro do app (se algo falhou)
+        if: failure()
+        shell: pwsh
+        run: Get-Content app.log, app.err -ErrorAction SilentlyContinue
+===== FIM: .github/workflows/windows.yml =====
+
+===== ARQUIVO: dist/manifest.json =====
+{
+  "name": "CodeLens",
+  "short_name": "CodeLens",
+  "description": "Personal code editor with AI analysis and GitHub integration",
+  "start_url": "/", "id": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["developer", "productivity", "utilities"],
+  "screenshots": []
+}
+===== FIM: dist/manifest.json =====
+
+===== ARQUIVO: lib/api-client-react/index.ts =====
+/**
+ * Ligação da tela com o servidor — substitui o "@workspace/api-client-react"
+ * que ficou preso na Replit. Cada função aqui chama um endereço /api/... .
+ */
+import {
+  useQuery,
+  useMutation,
+  type UseQueryOptions,
+  type UseMutationOptions,
+  type QueryKey,
+} from "@tanstack/react-query";
+
+// ── Tipos ────────────────────────────────────────────────────────────────────
+export interface FileNode {
+  name: string;
+  path: string;
+  type: "file" | "directory";
+  children?: FileNode[];
+}
+export interface FileContent {
+  path: string;
+  content: string;
+  language: string;
+  isBinary: boolean;
+}
+export interface Project {
+  id: string;
+  name: string;
+  createdAt: string;
+  fileCount: number;
+  sizeBytes: number;
+}
+export interface ProjectDetail extends Project {
+  tree: FileNode;
+}
+export interface Settings {
+  aiApiKeySet: boolean;
+  aiBaseUrl: string | null;
+  aiModel: string | null;
+  githubTokenSet: boolean;
+}
+export interface UpdateSettingsBody {
+  aiApiKey?: string | null;
+  aiBaseUrl?: string | null;
+  aiModel?: string | null;
+  githubToken?: string | null;
+}
+export interface ChatMessage { role: string; content: string }
+export interface AiChatBody {
+  messages: ChatMessage[];
+  fileContext?: string | null;
+  filePath?: string | null;
+  projectId?: string | null;
+  projectContext?: unknown;
+  terminalContext?: unknown;
+  [k: string]: unknown;
+}
+export interface AiChatResponse { reply: string; model?: string; [k: string]: any }
+
+// ── Pedido básico ────────────────────────────────────────────────────────────
+const BASE = ((import.meta as any).env?.BASE_URL ?? "/").replace(/\/$/, "");
+
+export class ApiError extends Error {
+  status: number;
+  data: any;
+  constructor(status: number, message: string, data: any) {
+    super(message);
+    this.status = status;
+    this.data = data;
+  }
+}
+
+export async function apiFetch<T = any>(path: string, init: RequestInit = {}): Promise<T> {
+  const headers: Record<string, string> = { ...(init.headers as Record<string, string>) };
+  if (init.body && !(init.body instanceof FormData) && !headers["Content-Type"]) {
+    headers["Content-Type"] = "application/json";
+  }
+  const res = await fetch(`${BASE}/api${path}`, { ...init, headers });
+  if (res.status === 204) return undefined as T;
+  const text = await res.text();
+  let data: any = text;
+  try { data = text ? JSON.parse(text) : undefined; } catch { /* resposta não é JSON */ }
+  if (!res.ok) {
+    const msg =
+      (data && typeof data === "object" && (data.error || data.message)) ||
+      (typeof data === "string" && data.trim().startsWith("<")
+        ? `O servidor não respondeu (erro ${res.status}). Ele está ligado?`
+        : `Erro ${res.status}`);
+    throw new ApiError(res.status, String(msg), data);
+  }
+  if (typeof data === "string" && data.trim().startsWith("<")) {
+    throw new ApiError(res.status, "O servidor não respondeu (veio uma página no lugar). Ele está ligado?", data);
+  }
+  return data as T;
+}
+
+const json = (v: unknown) => JSON.stringify(v);
+const qs = (p: Record<string, unknown>) =>
+  "?" + new URLSearchParams(Object.entries(p).filter(([, v]) => v != null).map(([k, v]) => [k, String(v)])).toString();
+
+type QOpts<T> = { query?: Partial<UseQueryOptions<T, ApiError, T, QueryKey>> };
+type MOpts<T, V> = { mutation?: UseMutationOptions<T, ApiError, V> };
+
+// ── Chaves de cache ──────────────────────────────────────────────────────────
+export const getListProjectsQueryKey = () => ["/api/projects"] as const;
+export const getGetProjectQueryKey = (projectId: string) => [`/api/projects/${projectId}`] as const;
+export const getGetFileContentQueryKey = (projectId: string, params?: { path: string }) =>
+  (params ? [`/api/projects/${projectId}/files`, params] : [`/api/projects/${projectId}/files`]) as QueryKey;
+export const getGetSettingsQueryKey = () => ["/api/settings"] as const;
+
+// ── Consultas ────────────────────────────────────────────────────────────────
+export function useListProjects(opts?: QOpts<Project[]>) {
+  return useQuery<Project[], ApiError, Project[], QueryKey>({
+    queryKey: getListProjectsQueryKey(),
+    queryFn: () => apiFetch<Project[]>("/projects"),
+    ...(opts?.query as object),
+  });
+}
+
+export function useGetProject(projectId: string, opts?: QOpts<ProjectDetail>) {
+  return useQuery<ProjectDetail, ApiError, ProjectDetail, QueryKey>({
+    queryKey: getGetProjectQueryKey(projectId),
+    queryFn: () => apiFetch<ProjectDetail>(`/projects/${encodeURIComponent(projectId)}`),
+    enabled: !!projectId,
+    ...(opts?.query as object),
+  });
+}
+
+export function useGetFileContent(projectId: string, params: { path: string }, opts?: QOpts<FileContent>) {
+  return useQuery<FileContent, ApiError, FileContent, QueryKey>({
+    queryKey: getGetFileContentQueryKey(projectId, params),
+    queryFn: () => apiFetch<FileContent>(`/projects/${encodeURIComponent(projectId)}/files${qs(params)}`),
+    ...(opts?.query as object),
+  });
+}
+
+export function useGetSettings(opts?: QOpts<Settings>) {
+  return useQuery<Settings, ApiError, Settings, QueryKey>({
+    queryKey: getGetSettingsQueryKey(),
+    queryFn: () => apiFetch<Settings>("/settings"),
+    ...(opts?.query as object),
+  });
+}
+
+// ── Ações ────────────────────────────────────────────────────────────────────
+export function useUpdateSettings(opts?: MOpts<Settings, { data: UpdateSettingsBody }>) {
+  return useMutation<Settings, ApiError, { data: UpdateSettingsBody }>({
+    mutationFn: ({ data }) => apiFetch<Settings>("/settings", { method: "PUT", body: json(data) }),
+    ...opts?.mutation,
+  });
+}
+
+export function useUploadProject(opts?: MOpts<Project, { data: { file: Blob; name?: string } }>) {
+  return useMutation<Project, ApiError, { data: { file: Blob; name?: string } }>({
+    mutationFn: ({ data }) => {
+      const fd = new FormData();
+      fd.append("file", data.file, (data.file as File).name || "projeto.zip");
+      if (data.name) fd.append("name", data.name);
+      return apiFetch<Project>("/projects", { method: "POST", body: fd });
+    },
+    ...opts?.mutation,
+  });
+}
+
+export function useDeleteProject(opts?: MOpts<void, { projectId: string }>) {
+  return useMutation<void, ApiError, { projectId: string }>({
+    mutationFn: ({ projectId }) => apiFetch<void>(`/projects/${encodeURIComponent(projectId)}`, { method: "DELETE" }),
+    ...opts?.mutation,
+  });
+}
+
+export function useImportFromGithub(opts?: MOpts<Project, { data: { repoUrl: string; branch?: string | null } }>) {
+  return useMutation<Project, ApiError, { data: { repoUrl: string; branch?: string | null } }>({
+    mutationFn: ({ data }) => apiFetch<Project>("/projects/import-github", { method: "POST", body: json(data) }),
+    ...opts?.mutation,
+  });
+}
+
+export function useWriteFile(opts?: MOpts<any, { projectId: string; data: { path: string; content: string } }>) {
+  return useMutation<any, ApiError, { projectId: string; data: { path: string; content: string } }>({
+    mutationFn: ({ projectId, data }) =>
+      apiFetch(`/projects/${encodeURIComponent(projectId)}/files`, { method: "PUT", body: json(data) }),
+    ...opts?.mutation,
+  });
+}
+
+export function useDeleteFile(opts?: MOpts<void, { projectId: string; params: { path: string } }>) {
+  return useMutation<void, ApiError, { projectId: string; params: { path: string } }>({
+    mutationFn: ({ projectId, params }) =>
+      apiFetch<void>(`/projects/${encodeURIComponent(projectId)}/files${qs(params)}`, { method: "DELETE" }),
+    ...opts?.mutation,
+  });
+}
+
+export function useAiChat(opts?: MOpts<AiChatResponse, { data: AiChatBody }>) {
+  return useMutation<AiChatResponse, ApiError, { data: AiChatBody }>({
+    mutationFn: ({ data }) => apiFetch<AiChatResponse>("/ai/chat", { method: "POST", body: json(data) }),
+    ...opts?.mutation,
+  });
+}
+
+export function useCreateGithubRepo(opts?: MOpts<any, { data: any }>) {
+  return useMutation<any, ApiError, { data: any }>({
+    mutationFn: ({ data }) => apiFetch("/github/create-repo", { method: "POST", body: json(data) }),
+    ...opts?.mutation,
+  });
+}
+===== FIM: lib/api-client-react/index.ts =====
+
+===== ARQUIVO: lib/api-zod/index.ts =====
+/**
+ * Regras de conferência dos pedidos — substitui o "@workspace/api-zod"
+ * que ficou preso na Replit. Só confere o essencial e deixa passar o resto.
+ */
+import { z } from "zod";
+
+const loose = <T extends z.ZodRawShape>(shape: T) => z.object(shape).passthrough();
+const any = z.any();
+
+export const HealthCheckResponse = loose({ status: z.string() });
+
+export const ListProjectsResponse = any;
+export const GetProjectParams = loose({ projectId: z.coerce.string() });
+export const GetProjectResponse = any;
+export const DeleteProjectParams = loose({ projectId: z.coerce.string() });
+
+export const GetFileContentQueryParams = loose({ path: z.string().min(1) });
+export const DeleteFileQueryParams = loose({ path: z.string().min(1) });
+export const WriteFileBody = loose({ path: z.string().min(1), content: z.string() });
+
+export const GetSettingsResponse = any;
+export const UpdateSettingsResponse = any;
+export const UpdateSettingsBody = loose({
+  aiApiKey: z.string().nullish(),
+  aiBaseUrl: z.string().nullish(),
+  aiModel: z.string().nullish(),
+  githubToken: z.string().nullish(),
+});
+
+export const ExecCommandBody = loose({ command: z.string().min(1) });
+
+export const AiChatBody = loose({
+  messages: z.array(loose({ role: z.string(), content: z.string() })),
+  fileContext: z.string().nullish(),
+  filePath: z.string().nullish(),
+  projectId: z.union([z.string(), z.number()]).nullish().transform((v) => (v == null ? v : String(v))),
+  projectContext: z.any().optional(),
+  terminalContext: z.any().optional(),
+});
+export const AnalyzeFileBody = loose({
+  projectId: z.union([z.string(), z.number()]).transform(String),
+  filePath: z.string(),
+  content: z.string().optional(),
+});
+export const AnalyzeFolderBody = loose({
+  projectId: z.union([z.string(), z.number()]).transform(String),
+  folderPath: z.string().optional().default(""),
+});
+
+export const CreateGithubRepoBody = loose({
+  projectId: z.union([z.string(), z.number()]).transform(String),
+  repoName: z.string().min(1),
+  description: z.string().nullish(),
+  isPrivate: z.boolean().optional().default(false),
+});
+export const ImportFromGithubBody = loose({
+  repoUrl: z.string().min(1),
+  branch: z.string().nullish(),
+});
+===== FIM: lib/api-zod/index.ts =====
+
+===== ARQUIVO: lib/db/index.ts =====
+/**
+ * Banco de dados local — substitui o "@workspace/db" que ficou preso na Replit.
+ *
+ * Antes: Postgres na nuvem (Neon), precisava de DATABASE_URL e senha.
+ * Agora: PGlite — o mesmo Postgres, só que rodando dentro do próprio Node,
+ * guardado na pasta  dados/banco  ao lado do programa. Sem internet, sem senha.
+ * O resto do código (drizzle) continua igualzinho.
+ */
+import path from "path";
+import fs from "fs";
+import { PGlite } from "@electric-sql/pglite";
+import { drizzle } from "drizzle-orm/pglite";
+import { pgTable, serial, text, integer, timestamp, uniqueIndex, customType } from "drizzle-orm/pg-core";
+
+const DATA_DIR = path.resolve(process.env.DATA_DIR ?? path.join(process.cwd(), "dados"));
+const STORAGE_BASE = path.resolve(process.env.STORAGE_PATH ?? path.join(DATA_DIR, "projetos"));
+fs.mkdirSync(DATA_DIR, { recursive: true });
+fs.mkdirSync(STORAGE_BASE, { recursive: true });
+
+/**
+ * A pasta de cada projeto é guardada só pelo nome (slug) e montada na hora
+ * com a pasta atual. Assim dá para mover a pasta do programa (ou trocar de PC)
+ * sem os projetos se perderem.
+ */
+const projectFolder = customType<{ data: string; driverData: string }>({
+  dataType: () => "text",
+  toDriver: (v) => path.basename(String(v).replace(/\\/g, "/")),
+  fromDriver: (v) => path.join(STORAGE_BASE, path.basename(String(v).replace(/\\/g, "/"))),
+});
+
+export const projectsTable = pgTable("projects", {
+  id: serial("id").primaryKey(),
+  slug: text("slug").notNull(),
+  name: text("name").notNull(),
+  storagePath: projectFolder("storage_path").notNull(),
+  fileCount: integer("file_count").notNull().default(0),
+  sizeBytes: integer("size_bytes").notNull().default(0),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const projectFilesTable = pgTable(
+  "project_files",
+  {
+    id: serial("id").primaryKey(),
+    projectId: integer("project_id").notNull().references(() => projectsTable.id, { onDelete: "cascade" }),
+    path: text("path").notNull(),
+    content: text("content").notNull(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (t) => [uniqueIndex("project_files_project_path").on(t.projectId, t.path)],
+);
+
+export const settingsTable = pgTable("settings", {
+  id: serial("id").primaryKey(),
+  aiApiKey: text("ai_api_key"),
+  aiBaseUrl: text("ai_base_url"),
+  aiModel: text("ai_model"),
+  githubToken: text("github_token"),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});
+
+export const snippetsTable = pgTable("snippets", {
+  id: serial("id").primaryKey(),
+  title: text("title").notNull().default("Sem título"),
+  html: text("html").notNull().default(""),
+  css: text("css").notNull().default(""),
+  js: text("js").notNull().default(""),
+  mode: text("mode").notNull().default("html"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+/**
+ * Abre o banco com segurança. Se ele estiver estragado (ex.: o computador
+ * desligou ou reiniciou com o app aberto), o banco velho é GUARDADO DE LADO
+ * (não apaga nada) e um banco novo é criado — o app volta a funcionar.
+ */
+const PONTEIRO = path.join(DATA_DIR, "banco-atual.txt");
+function pastaDoBanco(): string {
+  try { const n = fs.readFileSync(PONTEIRO, "utf8").trim(); if (n && !n.includes("..") && !/[\\/]/.test(n)) return path.join(DATA_DIR, n); } catch {}
+  return path.join(DATA_DIR, "banco");
+}
+// Tira a "trava" que o banco deixa quando a janela preta é fechada de repente.
+// Sem isso, no dia seguinte o banco não abre ("Aborted()") — era o "só funciona no 1º dia".
+function tirarTrava(dir: string) {
+  for (const f of ["postmaster.pid"]) { try { fs.rmSync(path.join(dir, f), { force: true }); } catch {} }
+}
+// Abre o banco com uma "rede": se ele quebrar lá dentro (erro "Aborted"), a gente
+// fica sabendo aqui e trata, em vez de o programa fechar na sua cara.
+function abrirComRede(dir: string): Promise<PGlite> {
+  return new Promise((ok, falha) => {
+    let feito = false;
+    const fim = (e?: any, b?: PGlite) => {
+      if (feito) return; feito = true;
+      process.off("uncaughtException", pega); process.off("unhandledRejection", pega); clearTimeout(t);
+      if (e) falha(e); else ok(b!);
+    };
+    const pega = (e: any) => fim(e || new Error("o banco quebrou ao abrir"));
+    process.on("uncaughtException", pega); process.on("unhandledRejection", pega);
+    const t = setTimeout(() => fim(new Error("o banco não respondeu em 60 segundos")), 60000);
+    try { const b = new PGlite(dir); b.query("select 1").then(() => fim(undefined, b), pega); } catch (e) { pega(e); }
+  });
+}
+
+async function abrirBancoSeguro(): Promise<{ banco: PGlite; recuperado: boolean }> {
+  const dir = pastaDoBanco();
+  fs.mkdirSync(dir, { recursive: true });
+  let banco: PGlite | null = null;
+  tirarTrava(dir);
+  try {
+    banco = await abrirComRede(dir);
+    return { banco, recuperado: false };
+  } catch (e: any) {
+    try { await banco?.close(); } catch {}
+    const carimbo = new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
+    const lado = dir + "-com-defeito-" + carimbo;
+    let novo = dir;
+    try { fs.renameSync(dir, lado); }
+    catch { novo = path.join(DATA_DIR, "banco-" + carimbo); } // Windows às vezes não deixa renomear: usa outra pasta
+    fs.mkdirSync(novo, { recursive: true });
+    try { fs.writeFileSync(PONTEIRO, path.basename(novo), "utf8"); } catch {}
+    const aviso = `O banco local estava estragado e foi refeito em ${new Date().toLocaleString("pt-BR")}.\n` +
+      `Motivo técnico: ${e?.message || e}\n` +
+      `O banco antigo NÃO foi apagado: ${fs.existsSync(lado) ? lado : dir}\n` +
+      `Causa mais comum: o computador desligou/reiniciou com o app aberto.\n`;
+    try { fs.writeFileSync(path.join(DATA_DIR, "AVISO-banco-recuperado.txt"), aviso, "utf8"); } catch {}
+    console.error("\n  ⚠ " + aviso.replace(/\n/g, "\n  ") + "\n");
+    return { banco: await abrirComRede(novo), recuperado: true };
+  }
+}
+const aberto = await abrirBancoSeguro();
+// Fecha o banco direito quando a janela preta é fechada (evita estragar de novo)
+let fechando = false;
+async function fecharBanco(sinal: string) {
+  if (fechando) return; fechando = true;
+  try { await aberto.banco.close(); } catch {}
+  process.exit(sinal === "SIGINT" ? 130 : 0);
+}
+for (const s of ["SIGINT", "SIGTERM", "SIGHUP", "SIGBREAK"]) { try { process.on(s as NodeJS.Signals, () => { void fecharBanco(s); }); } catch {} }
+
+const client = aberto.banco;
+
+// Cria as tabelas na primeira vez (não apaga nada se já existirem)
+await client.exec(`
+  CREATE TABLE IF NOT EXISTS projects (
+    id SERIAL PRIMARY KEY,
+    slug TEXT NOT NULL,
+    name TEXT NOT NULL,
+    storage_path TEXT NOT NULL,
+    file_count INTEGER NOT NULL DEFAULT 0,
+    size_bytes INTEGER NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT now()
+  );
+  CREATE TABLE IF NOT EXISTS project_files (
+    id SERIAL PRIMARY KEY,
+    project_id INTEGER NOT NULL REFERENCES projects(id) ON DELETE CASCADE,
+    path TEXT NOT NULL,
+    content TEXT NOT NULL,
+    updated_at TIMESTAMP NOT NULL DEFAULT now()
+  );
+  CREATE UNIQUE INDEX IF NOT EXISTS project_files_project_path ON project_files(project_id, path);
+  CREATE TABLE IF NOT EXISTS settings (
+    id SERIAL PRIMARY KEY,
+    ai_api_key TEXT,
+    ai_base_url TEXT,
+    ai_model TEXT,
+    github_token TEXT,
+    updated_at TIMESTAMP NOT NULL DEFAULT now()
+  );
+  CREATE TABLE IF NOT EXISTS snippets (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL DEFAULT 'Sem título',
+    html TEXT NOT NULL DEFAULT '',
+    css TEXT NOT NULL DEFAULT '',
+    js TEXT NOT NULL DEFAULT '',
+    mode TEXT NOT NULL DEFAULT 'html',
+    created_at TIMESTAMP NOT NULL DEFAULT now()
+  );
+`);
+
+export const db = drizzle(client);
+
+// Banco refeito ou vazio: reencontra os projetos pelas pastas em dados/projetos (os arquivos nunca saíram do disco)
+async function reencontrarProjetos() {
+  const r = await client.query<{ n: number }>("select count(*)::int as n from projects");
+  if ((r.rows[0]?.n ?? 0) > 0) return;
+  let pastas: string[] = [];
+  try { pastas = fs.readdirSync(STORAGE_BASE, { withFileTypes: true }).filter((d) => d.isDirectory() && !d.name.startsWith(".")).map((d) => d.name); } catch { return; }
+  for (const slug of pastas) {
+    let qtd = 0, tam = 0;
+    const anda = (d: string) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (e.name === "node_modules" || e.name === ".git") continue; const f = path.join(d, e.name); if (e.isDirectory()) anda(f); else { qtd++; try { tam += fs.statSync(f).size; } catch {} } } };
+    try { anda(path.join(STORAGE_BASE, slug)); } catch {}
+    await client.query("insert into projects (slug, name, storage_path, file_count, size_bytes) values ($1, $2, $3, $4, $5)", [slug, slug.replace(/-\d+$/, "").replace(/[-_]+/g, " "), path.join(STORAGE_BASE, slug), qtd, tam]);
+  }
+  if (pastas.length) console.log(`\n  ↺ ${pastas.length} projeto(s) reencontrado(s) na pasta dados/projetos.\n`);
+}
+try { await reencontrarProjetos(); } catch (e) { console.error("  (não consegui reencontrar os projetos:", (e as Error).message, ")"); }
+export { STORAGE_BASE, DATA_DIR };
+===== FIM: lib/db/index.ts =====
+
+===== ARQUIVO: package.json =====
+{
+  "name": "codelens-local",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CodeLens fora da Replit: editor com IA, terminal e preview, rodando no seu PC.",
+  "scripts": {
+    "iniciar": "node scripts/iniciar.mjs",
+    "start": "tsx server/index.ts",
+    "build": "vite build",
+    "dev": "concurrently -k -n servidor,tela -c blue,magenta \"npm:dev:servidor\" \"npm:dev:tela\"",
+    "dev:servidor": "tsx watch --clear-screen=false server/index.ts",
+    "dev:tela": "vite",
+    "checar": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.18.0",
+    "@codemirror/commands": "^6.7.0",
+    "@codemirror/lang-css": "^6.3.0",
+    "@codemirror/lang-html": "^6.4.9",
+    "@codemirror/lang-javascript": "^6.2.2",
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/lang-markdown": "^6.3.0",
+    "@codemirror/lang-python": "^6.1.6",
+    "@codemirror/lang-rust": "^6.0.1",
+    "@codemirror/lang-sql": "^6.8.0",
+    "@codemirror/language": "^6.10.0",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.34.0",
+    "@electric-sql/pglite": "^0.3.0",
+    "@google/genai": "^1.0.0",
+    "@octokit/rest": "^21.0.0",
+    "@radix-ui/react-accordion": "^1.2.0",
+    "@radix-ui/react-alert-dialog": "^1.1.0",
+    "@radix-ui/react-aspect-ratio": "^1.1.0",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-checkbox": "^1.1.0",
+    "@radix-ui/react-collapsible": "^1.1.0",
+    "@radix-ui/react-context-menu": "^2.2.0",
+    "@radix-ui/react-dialog": "^1.1.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.0",
+    "@radix-ui/react-hover-card": "^1.1.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-menubar": "^1.1.0",
+    "@radix-ui/react-navigation-menu": "^1.2.0",
+    "@radix-ui/react-popover": "^1.1.0",
+    "@radix-ui/react-progress": "^1.1.0",
+    "@radix-ui/react-radio-group": "^1.2.0",
+    "@radix-ui/react-scroll-area": "^1.2.0",
+    "@radix-ui/react-select": "^2.1.0",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slider": "^1.2.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.0",
+    "@radix-ui/react-toggle": "^1.1.0",
+    "@radix-ui/react-toggle-group": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.0",
+    "@tanstack/react-query": "^5.59.0",
+    "adm-zip": "^0.5.16",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.0.0",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "drizzle-orm": "^0.44.0",
+    "embla-carousel-react": "^8.3.0",
+    "express": "^5.1.0",
+    "highlight.js": "^11.10.0",
+    "input-otp": "^1.2.4",
+    "lucide-react": "^0.460.0",
+    "mime-types": "^2.1.35",
+    "msedge-tts": ">=1.3.4",
+    "multer": "^2.0.0",
+    "next-themes": "^0.4.3",
+    "pino": "^9.5.0",
+    "pino-http": "^10.3.0",
+    "pino-pretty": "^13.0.0",
+    "react": "^19.0.0",
+    "react-day-picker": "^9.4.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.53.0",
+    "react-markdown": "^9.0.1",
+    "react-resizable-panels": "^2.1.7",
+    "recharts": "^2.13.0",
+    "rehype-highlight": "^7.0.1",
+    "remark-gfm": "^4.0.0",
+    "sonner": "^1.7.0",
+    "tailwind-merge": "^2.5.4",
+    "tsx": "^4.19.0",
+    "vaul": "^1.1.1",
+    "wouter": "^3.3.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/adm-zip": "^0.5.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/mime-types": "^2.1.4",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "concurrently": "^9.1.0",
+    "tailwindcss": "^4.0.0",
+    "tw-animate-css": "^1.2.0",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.0"
+  }
+}
+===== FIM: package.json =====
+
+===== ARQUIVO: public/manifest.json =====
+{
+  "name": "CodeLens",
+  "short_name": "CodeLens",
+  "description": "Personal code editor with AI analysis and GitHub integration",
+  "start_url": "/", "id": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["developer", "productivity", "utilities"],
+  "screenshots": []
+}
+===== FIM: public/manifest.json =====
+
+===== ARQUIVO: server/index.ts =====
+import "./lib/gemini-ponte"; // chave nova do Gemini (AQ.): precisa vir antes de tudo
+import app from "./app";
+import { logger } from "./lib/logger";
+
+// Antes: sem PORT ele "desligava sozinho". Agora usa 8080 se ninguém disser outra.
+const port = Number(process.env["PORT"] || 8080);
+
+const server = app.listen(port, () => {
+  logger.info({ port }, "Servidor ligado");
+  console.log(`\n  ✅ CodeLens ligado em  http://localhost:${port}\n  (deixe esta janela aberta; para desligar, feche-a ou aperte Ctrl+C)\n`);
+});
+
+server.on("error", (err: NodeJS.ErrnoException) => {
+  if (err.code === "EADDRINUSE") {
+    console.error(`\n  ⚠ A porta ${port} já está em uso. Talvez o CodeLens já esteja aberto em http://localhost:${port}\n`);
+  } else {
+    console.error(err);
+  }
+  process.exit(1);
+});
+===== FIM: server/index.ts =====
+
+===== ARQUIVO: server/routes/ai.ts =====
+import { Router, type IRouter } from "express";
+import { edgeTts, ultimoErroTts } from "../lib/tts.js";
+import { eq } from "drizzle-orm";
+import { db, projectsTable, settingsTable } from "@workspace/db";
+import { AnalyzeFileBody, AnalyzeFolderBody, AiChatBody } from "@workspace/api-zod";
+import { isBinaryFile, detectLanguage } from "../lib/storage.js";
+import { ensureProjectOnDisk } from "../lib/persistFiles.js";
+import { GoogleGenAI } from "@google/genai";
+import path from "path";
+import fs from "fs/promises";
+
+async function buildProjectContext(projectId: string): Promise<{ text: string; fileCount: number; totalFiles: number; truncated: boolean; fileList: string }> {
+  const numId = parseInt(projectId, 10);
+  if (isNaN(numId)) throw new Error("ID de projeto inválido");
+  const rows = await db.select().from(projectsTable).where(eq(projectsTable.id, numId)).limit(1);
+  const project = rows[0];
+  if (!project) throw new Error("Projeto não encontrado");
+
+  await ensureProjectOnDisk(project.id, project.storagePath);
+
+  const projectDir = project.storagePath;
+  const MAX_CHARS = 500_000;
+  const MAX_DEPTH = 15;
+  const SKIP_DIRS = new Set(["node_modules", ".git", "dist", "build", ".next", ".cache", "__pycache__", ".venv", "vendor", ".svn"]);
+
+  const allFiles: Array<{ relPath: string; fullPath: string; size: number }> = [];
+
+  async function collectFiles(dir: string, relBase: string, depth = 0) {
+    if (depth > MAX_DEPTH) return;
+    let entries;
+    try { entries = await fs.readdir(dir, { withFileTypes: true }); } catch { return; }
+    const sorted = entries
+      .filter(e => !e.name.startsWith(".") && !SKIP_DIRS.has(e.name))
+      .sort((a, b) => {
+        if (a.isDirectory() && !b.isDirectory()) return -1;
+        if (!a.isDirectory() && b.isDirectory()) return 1;
+        return a.name.localeCompare(b.name);
+      });
+
+    for (const entry of sorted) {
+      const relPath = relBase ? `${relBase}/${entry.name}` : entry.name;
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        await collectFiles(fullPath, relPath, depth + 1);
+      } else if (!isBinaryFile(relPath)) {
+        try {
+          const stat = await fs.stat(fullPath);
+          allFiles.push({ relPath, fullPath, size: stat.size });
+        } catch {}
+      }
+    }
+  }
+
+  await collectFiles(projectDir, "");
+
+  const fileList = allFiles.map(f => `  ${f.relPath} (${f.size} bytes)`).join("\n");
+  const totalFiles = allFiles.length;
+
+  const parts: string[] = [];
+  let fileCount = 0;
+  let totalChars = 0;
+  let truncated = false;
+
+  for (const file of allFiles) {
+    if (totalChars >= MAX_CHARS) {
+      truncated = true;
+      continue;
+    }
+    try {
+      const content = await fs.readFile(file.fullPath, "utf-8");
+      const lang = detectLanguage(file.relPath);
+      const block = `// ═══ ARQUIVO: ${file.relPath} ═══\n\`\`\`${lang}\n${content}\n\`\`\`\n`;
+      parts.push(block);
+      totalChars += block.length;
+      fileCount++;
+    } catch {}
+  }
+
+  return { text: parts.join("\n"), fileCount, totalFiles, truncated, fileList };
+}
+
+const router: IRouter = Router();
+
+async function getAiSettings() {
+  const rows = await db.select().from(settingsTable).limit(1);
+  return rows[0] ?? null;
+}
+
+function getGeminiFallback(): { apiKey: string; baseUrl: string; model: string } | null {
+  const baseUrl = process.env.AI_INTEGRATIONS_GEMINI_BASE_URL;
+  const apiKey = process.env.AI_INTEGRATIONS_GEMINI_API_KEY;
+  if (baseUrl && apiKey) {
+    return { apiKey, baseUrl: baseUrl.replace(/\/$/, ""), model: "gemini-2.5-flash" };
+  }
+  return null;
+}
+
+async function callGemini(
+  baseUrl: string,
+  apiKey: string,
+  model: string,
+  messages: Array<{ role: string; content: string }>
+): Promise<string> {
+  const client = new GoogleGenAI({
+    apiKey,
+    httpOptions: { apiVersion: "", baseUrl },
+  });
+
+  const systemParts: string[] = [];
+  const nonSystemMessages = messages.filter((m) => {
+    if (m.role === "system") {
+      systemParts.push(m.content);
+      return false;
+    }
+    return true;
+  });
+
+  const contents = nonSystemMessages.map((m) => ({
+    role: m.role === "assistant" ? "model" : "user",
+    parts: [{ text: m.content }],
+  }));
+
+  const config: { maxOutputTokens: number; systemInstruction?: string } = { maxOutputTokens: 8192 };
+  if (systemParts.length > 0) {
+    config.systemInstruction = systemParts.join("\n\n");
+  }
+
+  const response = await client.models.generateContent({
+    model,
+    contents,
+    config,
+  });
+
+  const text = response.text;
+  if (!text) {
+    throw new Error("Gemini returned empty response");
+  }
+  return text;
+}
+
+async function callOpenAiCompatible(
+  baseUrl: string,
+  apiKey: string,
+  model: string,
+  messages: Array<{ role: string; content: string }>
+): Promise<string> {
+  const url = `${baseUrl.replace(/\/$/, "")}/chat/completions`;
+
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({ model, messages, max_tokens: 8000 }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`AI API error (${response.status}): ${errorText}`);
+  }
+
+  const data = await response.json() as {
+    choices: Array<{ message: { content: string } }>;
+  };
+
+  const content = data.choices?.[0]?.message?.content;
+  if (!content) {
+    throw new Error("AI returned empty response");
+  }
+  return content;
+}
+
+async function callAnthropic(
+  apiKey: string,
+  model: string,
+  messages: Array<{ role: string; content: string }>
+): Promise<string> {
+  const systemParts: string[] = [];
+  const chatMessages = messages.filter((m) => {
+    if (m.role === "system") {
+      systemParts.push(m.content);
+      return false;
+    }
+    return true;
+  });
+
+  const anthropicMessages = chatMessages.map((m) => ({
+    role: m.role === "assistant" ? "assistant" as const : "user" as const,
+    content: m.content,
+  }));
+
+  const body: Record<string, unknown> = {
+    model,
+    max_tokens: 8192,
+    messages: anthropicMessages,
+  };
+  if (systemParts.length > 0) {
+    body.system = systemParts.join("\n\n");
+  }
+
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify(body),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Anthropic API error (${response.status}): ${errorText}`);
+  }
+
+  const data = await response.json() as {
+    content: Array<{ type: string; text: string }>;
+  };
+
+  const textBlock = data.content?.find((b) => b.type === "text");
+  if (!textBlock?.text) {
+    throw new Error("Anthropic returned empty response");
+  }
+  return textBlock.text;
+}
+
+function detectProviderFromKey(apiKey: string): "anthropic" | "gemini" | "groq" | "perplexity" | "openai" {
+  if (apiKey.startsWith("sk-ant-")) return "anthropic";
+  if (/^(AIza|AQ\.)/.test(apiKey)) return "gemini";
+  if (apiKey.startsWith("gsk_")) return "groq";
+  if (apiKey.startsWith("pplx-")) return "perplexity";
+  return "openai";
+}
+
+function getDefaultBaseUrl(provider: string): string {
+  switch (provider) {
+    case "groq": return "https://api.groq.com/openai/v1";
+    case "perplexity": return "https://api.perplexity.ai";
+    case "gemini": return "https://generativelanguage.googleapis.com/v1beta/openai";
+    default: return "https://api.openai.com/v1";
+  }
+}
+
+function getDefaultModel(provider: string): string {
+  switch (provider) {
+    case "anthropic": return "claude-sonnet-4-20250514";
+    case "groq": return "llama-3.3-70b-versatile";
+    case "perplexity": return "sonar-pro";
+    case "gemini": return "gemini-2.5-flash";
+    default: return "gpt-4o";
+  }
+}
+
+async function callWithProvider(
+  provider: string,
+  apiKey: string,
+  baseUrl: string | null,
+  model: string,
+  messages: Array<{ role: string; content: string }>
+): Promise<string> {
+  if (provider === "anthropic") {
+    return callAnthropic(apiKey, model, messages);
+  }
+  return callOpenAiCompatible(
+    baseUrl ?? getDefaultBaseUrl(provider),
+    apiKey,
+    model,
+    messages
+  );
+}
+
+const FALLBACK_MODELS: Record<string, string[]> = {
+  anthropic: [
+    "claude-sonnet-4-20250514",
+    "claude-3-7-sonnet-20250219",
+    "claude-3-5-sonnet-20241022",
+    "claude-3-5-haiku-20241022",
+    "claude-3-haiku-20240307",
+  ],
+  openai: ["gpt-4o", "gpt-4o-mini", "gpt-4-turbo", "gpt-3.5-turbo"],
+  groq: ["llama-3.3-70b-versatile", "llama-3.1-70b-versatile"],
+  perplexity: ["sonar-pro", "sonar"],
+};
+
+async function callAi(
+  settings: { aiApiKey: string | null; aiBaseUrl: string | null; aiModel: string | null },
+  messages: Array<{ role: string; content: string }>
+): Promise<string> {
+  if (settings.aiApiKey) {
+    const provider = detectProviderFromKey(settings.aiApiKey);
+    const model = settings.aiModel?.trim() || null;
+
+    if (model) {
+      try {
+        return await callWithProvider(provider, settings.aiApiKey, settings.aiBaseUrl, model, messages);
+      } catch (err: unknown) {
+        const msg = err instanceof Error ? err.message : "";
+        if (!msg.includes("404")) throw err;
+      }
+    }
+
+    const candidates = FALLBACK_MODELS[provider] ?? [getDefaultModel(provider)];
+    for (const candidate of candidates) {
+      if (candidate === model) continue;
+      try {
+        return await callWithProvider(provider, settings.aiApiKey, settings.aiBaseUrl, candidate, messages);
+      } catch (e: unknown) {
+        const m = e instanceof Error ? e.message : "";
+        if (!m.includes("404")) throw e;
+      }
+    }
+
+    throw new Error(`Nenhum modelo disponível para ${provider}. Verifique sua chave de API.`);
+  }
+
+  const fallback = getGeminiFallback();
+  if (!fallback) {
+    throw new Error("AI API key not configured. Please go to Settings and add your API key.");
+  }
+  return callGemini(fallback.baseUrl, fallback.apiKey, fallback.model, messages);
+}
+
+router.post("/ai/chat", async (req, res): Promise<void> => {
+  const parsed = AiChatBody.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ error: parsed.error.message });
+    return;
+  }
+
+  const { messages, fileContext, filePath, projectId, projectContext, terminalContext } = parsed.data;
+
+  const settings = await getAiSettings();
+  const effectiveSettings = {
+    aiApiKey: settings?.aiApiKey ?? null,
+    aiBaseUrl: settings?.aiBaseUrl ?? null,
+    aiModel: settings?.aiModel ?? null,
+  };
+  if (!effectiveSettings.aiApiKey && !getGeminiFallback()) {
+    res.status(400).json({ error: "Chave de API da IA não configurada. Vá em Configurações." });
+    return;
+  }
+
+  const systemMessages: Array<{ role: string; content: string }> = [];
+
+  const FILE_CHANGE_INSTRUCTIONS = `
+Você tem TRÊS capacidades especiais — use os formatos abaixo quando apropriado. O sistema renderizará botões de ação para cada bloco.
+
+1. CRIAR OU EDITAR arquivo:
+<codelens-write path="caminho/do/arquivo.ts">
+conteúdo completo do arquivo aqui
+</codelens-write>
+
+2. DELETAR arquivo:
+<codelens-delete path="caminho/do/arquivo.ts"/>
+
+3. SUGERIR COMANDO para o terminal (npm install, git, node, etc.):
+<codelens-exec>npm install axios</codelens-exec>
+
+REGRAS IMPORTANTES:
+- Caminhos sempre relativos à raiz do projeto, sem / inicial
+- Conteúdo COMPLETO no bloco write (nunca use "..." ou "resto do código aqui")
+- Pode combinar múltiplos blocos write + exec em uma única resposta
+- Para instalar pacotes: use <codelens-exec>npm install nome-do-pacote</codelens-exec>
+- Para banco de dados: SQLite usa "better-sqlite3" ou "drizzle-orm", Postgres usa "pg" ou "drizzle-orm/node-postgres"
+- Explique em PORTUGUÊS o que você está fazendo antes de cada bloco
+- Quando houver múltiplas etapas (instalar + criar arquivo + configurar), faça tudo em sequência na mesma resposta`;
+
+  if (projectContext && projectId) {
+    try {
+      const { text, fileCount, totalFiles, truncated, fileList } = await buildProjectContext(projectId);
+      systemMessages.push({
+        role: "system",
+        content: `Voce e um engenheiro de software senior. Objetivo e direto. Sem gentilezas, sem desculpas, sem rodeios.
+
+══════════════════════════════════════════════════════════════
+INVENTARIO COMPLETO DO PROJETO (${totalFiles} arquivos encontrados):
+══════════════════════════════════════════════════════════════
+${fileList}
+══════════════════════════════════════════════════════════════
+
+${truncated
+  ? `NOTA: Projeto grande. ${fileCount} de ${totalFiles} arquivos incluidos com conteudo completo abaixo (limite de tamanho atingido). Os ${totalFiles - fileCount} restantes estao listados acima mas sem conteudo — se precisar deles, crie uma versao melhorada com bloco de acao.`
+  : `TODOS os ${totalFiles} arquivos do projeto estao incluidos com conteudo completo abaixo. Nao falta NENHUM arquivo.`}
+
+╔══════════════════════════════════════════════════════════════╗
+║  REGRA ABSOLUTA: NUNCA PECA ARQUIVOS AO USUARIO            ║
+║                                                              ║
+║  Voce JA TEM todos os arquivos. Eles estao ABAIXO.          ║
+║  A lista completa esta ACIMA.                                ║
+║                                                              ║
+║  PROIBIDO dizer:                                             ║
+║  - "preciso ver o arquivo X"                                 ║
+║  - "pode me mostrar/enviar/compartilhar..."                  ║
+║  - "para continuar, preciso de..."                           ║
+║  - "poderia me fornecer..."                                  ║
+║  - "nao encontrei o arquivo X" (se esta na lista, esta aqui)║
+║                                                              ║
+║  Se o arquivo esta na lista acima = voce TEM o conteudo.     ║
+║  Se NAO esta na lista = NAO EXISTE. Crie com bloco de acao.  ║
+║  NUNCA peca nada. NUNCA. Trabalhe com o que tem.             ║
+╚══════════════════════════════════════════════════════════════╝
+
+REGRAS DE COMPORTAMENTO:
+1. Va direto ao ponto. Sem gentilezas, sem "desculpe", sem "com certeza".
+2. Se o usuario pedir correcao, CORRIJA imediatamente com bloco de acao.
+3. Bug encontrado = mostre causa em 1 frase + correcao pronta.
+4. Respostas em PORTUGUES com markdown.
+5. Nunca diga "nao posso". Faca por etapas se for complexo.
+6. Analise usando os arquivos que JA ESTAO no contexto. Nao peca mais nada.
+
+CAPACIDADES (use blocos de acao):
+- Criar/editar arquivos: <codelens-write path="...">conteudo</codelens-write>
+- Deletar arquivos: <codelens-delete path="..."/>
+- Comandos de terminal: <codelens-exec>comando</codelens-exec>
+- Refatorar, reorganizar, corrigir bugs — tudo com blocos de acao
+
+══════════════════════════════════════════════════════════════
+CONTEUDO DOS ARQUIVOS (${fileCount} de ${totalFiles}):
+══════════════════════════════════════════════════════════════
+
+${text}
+
+══════════════════════════════════════════════════════════════
+FIM — TODOS OS ARQUIVOS FORAM FORNECIDOS ACIMA
+══════════════════════════════════════════════════════════════
+
+Referencie arquivos pelo caminho. Use os dados acima diretamente.
+${FILE_CHANGE_INSTRUCTIONS}`,
+      });
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Erro ao carregar projeto";
+      res.status(400).json({ error: message });
+      return;
+    }
+  } else if (fileContext && filePath) {
+    const language = detectLanguage(filePath);
+    systemMessages.push({
+      role: "system",
+      content: `Voce e um engenheiro de software senior. Objetivo e direto. Sem gentilezas. O usuario esta no arquivo "${filePath}".
+
+Conteudo do arquivo (${language}):
+\`\`\`${language}
+${fileContext}
+\`\`\`
+
+REGRAS: Respostas em portugues, diretas, com markdown. Se encontrar bug, corrija com bloco de acao. Nunca diga "desculpe" ou "com certeza". Va ao ponto.
+${FILE_CHANGE_INSTRUCTIONS}`,
+    });
+  } else {
+    systemMessages.push({
+      role: "system",
+      content: `Voce e um engenheiro de software senior. Objetivo e direto. Sem gentilezas, sem desculpas. Respostas em portugues com markdown. Se encontrar problema, corrija com bloco de acao. Nunca diga "desculpe", "com certeza" ou "fico feliz". Va direto ao ponto.
+${FILE_CHANGE_INSTRUCTIONS}`,
+    });
+  }
+
+  // Inject terminal context as an extra system message if provided
+  if (terminalContext && terminalContext.trim()) {
+    systemMessages.push({
+      role: "system",
+      content: `📟 SAÍDA RECENTE DO TERMINAL DO USUÁRIO:
+\`\`\`
+${terminalContext.trim().slice(0, 8000)}
+\`\`\`
+Use esse contexto para entender erros recentes e ajudar o usuário a corrigir os problemas sem precisar que ele copie e cole os erros.`,
+    });
+  }
+
+  const allMessages = [
+    ...systemMessages,
+    ...messages.map((m) => ({ role: m.role, content: m.content })),
+  ];
+
+  try {
+    const reply = await callAi(effectiveSettings, allMessages);
+    res.json({ reply, model: effectiveSettings.aiModel ?? (getGeminiFallback()?.model ?? "gpt-4o") });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Erro na IA";
+    req.log.error({ err }, "AI chat failed");
+    res.status(400).json({ error: message });
+    return;
+  }
+});
+
+router.post("/ai/analyze-file", async (req, res): Promise<void> => {
+  const parsed = AnalyzeFileBody.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ error: parsed.error.message });
+    return;
+  }
+
+  const { projectId, filePath, content } = parsed.data;
+
+  const settings = await getAiSettings();
+  if (!settings?.aiApiKey && !getGeminiFallback()) {
+    res.status(400).json({ error: "AI API key not configured. Please go to Settings." });
+    return;
+  }
+
+  const language = detectLanguage(filePath);
+  const filename = path.basename(filePath);
+
+  const prompt = `Voce e um analista de codigo objetivo e direto. Analise este arquivo e responda em portugues:
+1. O que este arquivo faz (1-2 frases)
+2. Padroes e responsabilidades principais
+3. Bugs, problemas ou melhorias que voce identifica — se encontrar, mostre a correcao
+4. Qualidade geral do codigo
+
+Arquivo: ${filename} (${language})
+Caminho: ${filePath}
+
+\`\`\`${language}
+${content.slice(0, 8000)}
+\`\`\`
+
+Seja direto. Sem rodeios. Se tem bug, mostre a correcao pronta.`;
+
+  try {
+    const effectiveSettings = {
+      aiApiKey: settings?.aiApiKey ?? null,
+      aiBaseUrl: settings?.aiBaseUrl ?? null,
+      aiModel: settings?.aiModel ?? null,
+    };
+    const analysis = await callAi(effectiveSettings, [
+      { role: "user", content: prompt }
+    ]);
+
+    res.json({
+      analysis,
+      model: effectiveSettings.aiModel ?? (getGeminiFallback()?.model ?? "gpt-4o"),
+    });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Unknown AI error";
+    req.log.error({ err }, "AI analysis failed");
+    res.status(400).json({ error: message });
+    return;
+  }
+});
+
+router.post("/ai/analyze-folder", async (req, res): Promise<void> => {
+  const parsed = AnalyzeFolderBody.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ error: parsed.error.message });
+    return;
+  }
+
+  const { projectId, folderPath } = parsed.data;
+
+  const id = parseInt(projectId, 10);
+  if (isNaN(id)) {
+    res.status(400).json({ error: "Invalid project ID" });
+    return;
+  }
+
+  const [project] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  if (!project) {
+    res.status(404).json({ error: "Project not found" });
+    return;
+  }
+
+  const settings = await getAiSettings();
+  if (!settings?.aiApiKey && !getGeminiFallback()) {
+    res.status(400).json({ error: "AI API key not configured. Please go to Settings." });
+    return;
+  }
+
+  const normalizedFolder = folderPath.replace(/^\//, "");
+  const fullFolderPath = normalizedFolder
+    ? path.join(project.storagePath, normalizedFolder)
+    : project.storagePath;
+
+  const resolved = path.resolve(fullFolderPath);
+  const base = path.resolve(project.storagePath);
+  if (!resolved.startsWith(base)) {
+    res.status(400).json({ error: "Invalid folder path" });
+    return;
+  }
+
+  interface FileEntry {
+    path: string;
+    language: string;
+    preview: string;
+  }
+
+  const fileEntries: FileEntry[] = [];
+
+  async function collectFiles(dir: string, prefix: string): Promise<void> {
+    try {
+      const entries = await fs.readdir(dir);
+      for (const entry of entries) {
+        if (entry.startsWith(".")) continue;
+        const fullPath = path.join(dir, entry);
+        const rel = prefix ? `${prefix}/${entry}` : entry;
+        const stat = await fs.stat(fullPath);
+        if (stat.isDirectory()) {
+          await collectFiles(fullPath, rel);
+        } else if (!isBinaryFile(entry)) {
+          try {
+            const buf = await fs.readFile(fullPath);
+            const preview = buf.toString("utf-8").slice(0, 500);
+            fileEntries.push({
+              path: rel,
+              language: detectLanguage(entry),
+              preview,
+            });
+          } catch {
+            fileEntries.push({ path: rel, language: detectLanguage(entry), preview: "" });
+          }
+        }
+      }
+    } catch {
+    }
+  }
+
+  await collectFiles(fullFolderPath, "");
+
+  const folderName = normalizedFolder ? path.basename(normalizedFolder) : project.name;
+  const filesOverview = fileEntries.slice(0, 30).map((f) =>
+    `- ${f.path} (${f.language})${f.preview ? `\n  Preview: ${f.preview.slice(0, 200).replace(/\n/g, " ")}` : ""}`
+  ).join("\n");
+
+  const prompt = `Voce e um analista de codigo objetivo e direto. Analise esta pasta e responda em portugues:
+1. Proposito e funcao desta pasta no projeto
+2. Tipos de arquivos e codigo que contem
+3. Como se encaixa na arquitetura geral
+4. Padroes e convencoes observados
+5. Avaliacao da organizacao — se tem problema, aponte
+
+Pasta: ${folderName}
+Projeto: ${project.name}
+Arquivos analisados: ${fileEntries.length}
+
+Arquivos nesta pasta:
+${filesOverview}
+
+Seja direto e objetivo. Sem rodeios.`;
+
+  try {
+    const effectiveSettings = {
+      aiApiKey: settings?.aiApiKey ?? null,
+      aiBaseUrl: settings?.aiBaseUrl ?? null,
+      aiModel: settings?.aiModel ?? null,
+    };
+    const analysis = await callAi(effectiveSettings, [
+      { role: "user", content: prompt }
+    ]);
+
+    res.json({
+      analysis,
+      model: effectiveSettings.aiModel ?? (getGeminiFallback()?.model ?? "gpt-4o"),
+    });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Unknown AI error";
+    req.log.error({ err }, "AI folder analysis failed");
+    res.status(400).json({ error: message });
+    return;
+  }
+});
+
+router.post("/ai/tts", async (req, res): Promise<void> => {
+  const { text } = req.body;
+  if (!text || typeof text !== "string") {
+    res.status(400).json({ error: "Texto é obrigatório" });
+    return;
+  }
+
+  const cleanText = text
+    .replace(/<[^>]+>/g, " ")
+    .replace(/[*#_`>|]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const audio = await edgeTts(cleanText).catch((err) => { req.log.warn({ err }, "TTS falhou"); return null; });
+  if (!audio || audio.length < 100) {
+    // A tela usa a voz do próprio navegador quando isto falha
+    res.status(503).json({ error: "Voz neural indisponível — usando a voz do navegador. Detalhe: " + (ultimoErroTts || "sem resposta") });
+    return;
+  }
+  res.set({ "Content-Type": "audio/mpeg", "Content-Length": String(audio.length) });
+  res.send(audio);
+});
+
+
+export default router;
+===== FIM: server/routes/ai.ts =====
+
+===== ARQUIVO: server/routes/code-assistant.ts =====
+import { Router, type IRouter } from "express";
+
+const router: IRouter = Router();
+
+/**
+ * POST /api/code-assistant
+ * Streaming endpoint for the free chat assistant.
+ * Uses the client's own API key / URL / model.
+ * Falls back to Replit Gemini if no key is provided.
+ */
+router.post("/code-assistant", async (req, res): Promise<void> => {
+  const { message, history = [], apiKey, apiUrl, apiModel } = req.body as {
+    message: string;
+    history: Array<{ role: "user" | "assistant"; content: string }>;
+    apiKey?: string;
+    apiUrl?: string;
+    apiModel?: string;
+  };
+
+  if (!message?.trim()) {
+    res.status(400).json({ error: "Mensagem vazia" });
+    return;
+  }
+
+  const messages = [
+    ...history.map((h) => ({ role: h.role, content: h.content })),
+    { role: "user", content: message.trim() },
+  ];
+
+  // ── Set up SSE ──────────────────────────────────────────────────────────────
+  res.setHeader("Content-Type", "text/event-stream");
+  res.setHeader("Cache-Control", "no-cache");
+  res.setHeader("Connection", "keep-alive");
+  res.flushHeaders();
+
+  const sendChunk = (text: string) => {
+    res.write(`data: ${JSON.stringify({ text })}\n\n`);
+  };
+  const sendError = (msg: string) => {
+    res.write(`data: ${JSON.stringify({ error: msg })}\n\n`);
+    res.write("data: [DONE]\n\n");
+    res.end();
+  };
+  const sendDone = () => {
+    res.write("data: [DONE]\n\n");
+    res.end();
+  };
+
+  // ── No user key → try Replit Gemini (non-streaming, then fake stream) ───────
+  if (!apiKey?.trim()) {
+    const baseUrl = process.env.AI_INTEGRATIONS_GEMINI_BASE_URL;
+    const geminiKey = process.env.AI_INTEGRATIONS_GEMINI_API_KEY;
+
+    if (!baseUrl || !geminiKey) {
+      sendError("Configure sua chave de API em Configurações, ou abra o assistente e adicione sua própria chave.");
+      return;
+    }
+
+    try {
+      const url = `${baseUrl.replace(/\/$/, "")}/chat/completions`;
+      const resp = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${geminiKey}`,
+        },
+        body: JSON.stringify({ model: "gemini-2.5-flash", messages }),
+      });
+
+      if (!resp.ok) {
+        const err = await resp.text();
+        sendError(`Gemini: ${err.slice(0, 300)}`);
+        return;
+      }
+
+      const data = (await resp.json()) as {
+        choices?: Array<{ message?: { content?: string } }>;
+      };
+      const text = data.choices?.[0]?.message?.content ?? "";
+      sendChunk(text);
+      sendDone();
+    } catch (e: unknown) {
+      sendError((e instanceof Error ? e.message : "Erro desconhecido").slice(0, 300));
+    }
+    return;
+  }
+
+  // ── User key → streaming from their provider ────────────────────────────────
+  const effectiveUrl = (apiUrl || "https://api.openai.com/v1").replace(/\/$/, "");
+  const effectiveModel = apiModel || "gpt-4o-mini";
+
+  try {
+    const upstream = await fetch(`${effectiveUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey.trim()}`,
+      },
+      body: JSON.stringify({ model: effectiveModel, messages, stream: true, max_tokens: 8000 }),
+    });
+
+    if (!upstream.ok) {
+      const err = await upstream.text();
+      sendError(`Erro ${upstream.status}: ${err.slice(0, 300)}`);
+      return;
+    }
+
+    if (!upstream.body) {
+      sendError("Sem corpo na resposta da API.");
+      return;
+    }
+
+    const reader = upstream.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+
+    // Handle client disconnect
+    req.on("close", () => {
+      reader.cancel();
+    });
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop() ?? "";
+
+      for (const line of lines) {
+        if (!line.startsWith("data: ")) continue;
+        const payload = line.slice(6).trim();
+        if (payload === "[DONE]") {
+          sendDone();
+          return;
+        }
+        try {
+          const parsed = JSON.parse(payload) as {
+            choices?: Array<{ delta?: { content?: string } }>;
+            citations?: string[];
+          };
+          const delta = parsed.choices?.[0]?.delta?.content;
+          if (delta) sendChunk(delta);
+          if (parsed.citations) {
+            res.write(`data: ${JSON.stringify({ citations: parsed.citations })}\n\n`);
+          }
+        } catch {
+          // skip malformed JSON
+        }
+      }
+    }
+
+    sendDone();
+  } catch (e: unknown) {
+    if (!(e instanceof Error) || e.message !== "canceled") {
+      sendError((e instanceof Error ? e.message : "Erro desconhecido").slice(0, 300));
+    }
+  }
+});
+
+export default router;
+===== FIM: server/routes/code-assistant.ts =====
+
+===== ARQUIVO: server/routes/code-run.ts =====
+import { Router, type IRouter } from "express";
+import { exec } from "child_process";
+import os from "os";
+import path from "path";
+import fs from "fs/promises";
+
+const router: IRouter = Router();
+
+router.post("/code/run", async (req, res): Promise<void> => {
+  const { code, language } = req.body;
+
+  if (typeof code !== "string" || !code.trim()) {
+    res.status(400).json({ error: "Código vazio" });
+    return;
+  }
+
+  if (language !== "python") {
+    res.status(400).json({ error: "Apenas Python é suportado por enquanto" });
+    return;
+  }
+
+  const tmpFile = path.join(os.tmpdir(), `codelens_run_${Date.now()}_${Math.random().toString(36).slice(2)}.py`);
+
+  try {
+    await fs.writeFile(tmpFile, code, "utf-8");
+  } catch {
+    res.status(500).json({ error: "Erro ao criar arquivo temporário" });
+    return;
+  }
+
+  exec(
+    `${process.platform === "win32" ? "python" : "python3"} "${tmpFile}"`,
+    { timeout: 15_000, maxBuffer: 1024 * 1024 },
+    async (error, stdout, stderr) => {
+      await fs.unlink(tmpFile).catch(() => {});
+      if (error && error.code === undefined) {
+        // Timeout
+        res.json({ output: stdout, error: "Tempo limite excedido (15s)" });
+        return;
+      }
+      res.json({ output: stdout, error: stderr });
+    }
+  );
+});
+
+export default router;
+===== FIM: server/routes/code-run.ts =====
+
+===== ARQUIVO: server/routes/dev-server.ts =====
+import { Router, type IRouter } from "express";
+import type { Request, Response } from "express";
+import { eq } from "drizzle-orm";
+import { db, projectsTable } from "@workspace/db";
+import http from "http";
+import {
+  startDevServer,
+  stopDevServer,
+  getDevServer,
+  detectStartCommand,
+  needsInstall,
+} from "../lib/devServerRegistry.js";
+import { ensureProjectOnDisk } from "../lib/persistFiles.js";
+
+const router: IRouter = Router();
+
+async function resolveProject(projectId: string) {
+  const id = parseInt(projectId, 10);
+  if (isNaN(id)) return null;
+  const [project] = await db
+    .select()
+    .from(projectsTable)
+    .where(eq(projectsTable.id, id));
+  return project ?? null;
+}
+
+function serializeBody(req: Request): Buffer | null {
+  if (req.method === "GET" || req.method === "HEAD") return null;
+  if (req.body == null) return null;
+  const ct = (req.headers["content-type"] ?? "").toLowerCase();
+  if (typeof req.body === "object" && !Buffer.isBuffer(req.body)) {
+    if (ct.includes("application/x-www-form-urlencoded")) {
+      const encoded = new URLSearchParams(req.body as Record<string, string>).toString();
+      return Buffer.from(encoded);
+    }
+    return Buffer.from(JSON.stringify(req.body));
+  }
+  if (typeof req.body === "string") {
+    return Buffer.from(req.body);
+  }
+  return null;
+}
+
+function proxyRequest(
+  req: Request,
+  res: Response,
+  port: number,
+  targetPath: string,
+  errorHtml?: string,
+) {
+  const bodyBuf = serializeBody(req);
+  const proxyHeaders: Record<string, string> = {};
+  for (const [key, val] of Object.entries(req.headers)) {
+    if (typeof val === "string") proxyHeaders[key] = val;
+  }
+  proxyHeaders["host"] = `localhost:${port}`;
+  if (bodyBuf) {
+    proxyHeaders["content-length"] = String(bodyBuf.length);
+  } else {
+    delete proxyHeaders["content-length"];
+  }
+
+  const proxyReq = http.request(
+    { hostname: "localhost", port, path: targetPath, method: req.method, headers: proxyHeaders, timeout: 30000 },
+    (proxyRes) => {
+      const headers: Record<string, string | string[]> = {};
+      for (const [key, val] of Object.entries(proxyRes.headers)) {
+        if (val !== undefined) headers[key] = val as string | string[];
+      }
+      delete headers["x-frame-options"];
+      delete headers["content-security-policy"];
+      res.writeHead(proxyRes.statusCode ?? 200, headers);
+      proxyRes.pipe(res, { end: true });
+    }
+  );
+
+  proxyReq.on("timeout", () => {
+    proxyReq.destroy();
+    if (!res.headersSent) {
+      res.status(504).send(errorHtml ?? "Tempo limite de conexão excedido");
+    }
+  });
+
+  proxyReq.on("error", () => {
+    if (!res.headersSent) {
+      res.status(502).send(errorHtml ?? "Erro ao conectar");
+    }
+  });
+
+  if (bodyBuf) {
+    proxyReq.write(bodyBuf);
+    proxyReq.end();
+  } else if (req.method !== "GET" && req.method !== "HEAD") {
+    req.pipe(proxyReq, { end: true });
+  } else {
+    proxyReq.end();
+  }
+}
+
+function extractSearch(req: Request): string {
+  return req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+}
+
+const SERVER_NOT_STARTED_HTML = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Servidor não iniciado</title>
+<style>body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#0d1117;color:#8b949e;flex-direction:column;gap:12px}</style>
+</head>
+<body>
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+  <p style="font-size:14px;font-weight:600;color:#e6edf3;margin:0">Servidor não iniciado</p>
+  <p style="font-size:12px;margin:0">Clique em <strong>Iniciar Servidor</strong> no painel de Preview</p>
+</body>
+</html>`;
+
+function connectionErrorHtml(port: number): string {
+  return `<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Erro de conexão</title>
+<style>body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#0d1117;color:#8b949e;flex-direction:column;gap:8px}</style>
+</head>
+<body>
+  <p style="font-size:14px;font-weight:600;color:#f85149;margin:0">Erro ao conectar ao servidor</p>
+  <p style="font-size:12px;margin:0">Porta: ${port} — verifique o terminal</p>
+</body>
+</html>`;
+}
+
+router.post("/projects/:projectId/dev-server/start", async (req, res): Promise<void> => {
+  const project = await resolveProject(req.params.projectId);
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+
+  await ensureProjectOnDisk(project.id, project.storagePath);
+
+  const { command } = (req.body ?? {}) as { command?: string };
+  const id = project.id;
+  const willInstall = needsInstall(project.storagePath);
+  await startDevServer(id, project.storagePath, command);
+
+  const server = getDevServer(id)!;
+  const start = Date.now();
+  const timeout = willInstall ? 60_000 : 15_000;
+  while (!server.port && server.status === "starting" && Date.now() - start < timeout) {
+    await new Promise((r) => setTimeout(r, 500));
+  }
+
+  res.json({
+    running: server.status === "running",
+    status: server.status,
+    port: server.port,
+    command: server.command,
+    autoInstall: willInstall,
+    suggestedCommand: detectStartCommand(project.storagePath),
+  });
+});
+
+router.delete("/projects/:projectId/dev-server/stop", async (req, res): Promise<void> => {
+  const project = await resolveProject(req.params.projectId);
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+  const stopped = stopDevServer(project.id);
+  res.json({ stopped });
+});
+
+router.get("/projects/:projectId/dev-server/status", async (req, res): Promise<void> => {
+  const project = await resolveProject(req.params.projectId);
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+  const server = getDevServer(project.id);
+  if (!server) {
+    res.json({ running: false, port: null, status: "stopped", log: [] });
+    return;
+  }
+  res.json({
+    running: server.status === "running" || server.status === "starting",
+    port: server.port,
+    status: server.status,
+    command: server.command,
+    log: server.log.slice(-20).join(""),
+  });
+});
+
+router.all("/projects/:projectId/dev-proxy", async (req, res): Promise<void> => {
+  const project = await resolveProject(req.params.projectId);
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+  const server = getDevServer(project.id);
+  if (!server || !server.port) { res.redirect(req.originalUrl + "/"); return; }
+  proxyRequest(req, res, server.port, "/" + extractSearch(req));
+});
+
+router.all("/projects/:projectId/dev-proxy/", async (req, res): Promise<void> => {
+  const project = await resolveProject(req.params.projectId);
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+  const server = getDevServer(project.id);
+  if (!server || !server.port) { res.status(503).send(SERVER_NOT_STARTED_HTML); return; }
+  proxyRequest(req, res, server.port, "/" + extractSearch(req));
+});
+
+router.all("/projects/:projectId/dev-proxy/*path", async (req, res): Promise<void> => {
+  const project = await resolveProject(req.params.projectId);
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+
+  const server = getDevServer(project.id);
+  if (!server || !server.port) {
+    res.status(503).send(SERVER_NOT_STARTED_HTML);
+    return;
+  }
+
+  const rawPathParam = (req.params as Record<string, string | string[]>).path ?? "";
+  const rawPath = Array.isArray(rawPathParam) ? rawPathParam.join("/") : rawPathParam;
+  const targetPath = rawPath ? `/${rawPath}` : "/";
+  const fullPath = targetPath + extractSearch(req);
+
+  proxyRequest(req, res, server.port, fullPath, connectionErrorHtml(server.port));
+});
+
+router.all("/projects/:projectId/port-proxy/:port{/*path}", async (req, res): Promise<void> => {
+  const portNum = parseInt(req.params.port, 10);
+  if (isNaN(portNum) || portNum < 1024 || portNum > 65535) {
+    res.status(400).send("Invalid port");
+    return;
+  }
+
+  const rawPathParam = (req.params as Record<string, string | string[]>).path ?? "";
+  const rawPath = Array.isArray(rawPathParam) ? rawPathParam.join("/") : rawPathParam;
+  const targetPath = rawPath ? `/${rawPath}` : "/";
+  const fullPath = targetPath + extractSearch(req);
+
+  proxyRequest(req, res, portNum, fullPath, connectionErrorHtml(portNum));
+});
+
+export default router;
+===== FIM: server/routes/dev-server.ts =====
+
+===== ARQUIVO: server/routes/exec.ts =====
+import { Router, type IRouter } from "express";
+import { eq } from "drizzle-orm";
+import { db, projectsTable } from "@workspace/db";
+import { ExecCommandBody } from "@workspace/api-zod";
+import { spawnShell, whichDir } from "../lib/shell.js";
+import path from "path";
+import { registerTerminalProcess } from "../lib/devServerRegistry.js";
+import { ensureProjectOnDisk } from "../lib/persistFiles.js";
+
+const router: IRouter = Router();
+
+function detectBinPaths(): string[] {
+  const extra: string[] = [];
+  const tryResolve = (cmd: string) => {
+    const p = whichDir(cmd);
+    if (p) extra.push(path.dirname(p));
+  };
+  tryResolve("npm");
+  tryResolve("node");
+  tryResolve("npx");
+  tryResolve("yarn");
+  tryResolve("pnpm");
+  return [...new Set(extra)];
+}
+
+const DETECTED_BIN_PATHS = detectBinPaths();
+
+const BLOCKED_PATTERNS = [
+  /rm\s+-rf\s+\//,
+  /mkfs/,
+  /dd\s+if=.*of=\/dev/,
+  />\s*\/dev\/sd/,
+  /shutdown|reboot|halt|poweroff/,
+  /curl.*\|\s*(bash|sh|zsh)/,
+  /wget.*\|\s*(bash|sh|zsh)/,
+];
+
+function isCommandBlocked(cmd: string): boolean {
+  return BLOCKED_PATTERNS.some((p) => p.test(cmd));
+}
+
+function normalizeCommand(cmd: string): string {
+  return cmd
+    .replace(/^pip\s+/, "pip3 ")
+    .replace(/^pip\b/, "pip3")
+    .replace(/^python\s+/, "python3 ")
+    .replace(/^python\b/, "python3")
+    .replace(/pipenv run python\b/, "pipenv run python3")
+    .replace(/poetry run python\b/, "poetry run python3");
+}
+
+function buildEnv() {
+  const extraPaths = [
+    ...DETECTED_BIN_PATHS,
+    "/usr/local/bin",
+    "/usr/bin",
+    "/bin",
+    "/usr/local/sbin",
+    "/usr/sbin",
+    "/sbin",
+    "/usr/local/go/bin",
+  ];
+  const currentPath = process.env.PATH ?? "";
+  const pathSet = new Set([...currentPath.split(path.delimiter), ...extraPaths]);
+
+  // Filter out pnpm workspace config vars that bleed into user project processes
+  // These cause "Unknown env config" warnings when npm runs in user projects
+  const PNPM_CONFIG_KEYS = new Set([
+    "npm_config_minimum_release_age",
+    "npm_config_npm_globalconfig",
+    "npm_config_verify_deps_before_run",
+    "npm_config_jsr_registry",
+    "npm_config__jsr_registry",
+    "npm_config_catalog",
+    "npm_config_recursive",
+    "npm_config_overrides",
+    "npm_config_auto_install_peers",
+    "npm_config_strict_peer_dependencies",
+    // Generic pnpm config pattern
+  ]);
+
+  const filteredEnv: Record<string, string> = {};
+  for (const [key, val] of Object.entries(process.env)) {
+    if (typeof val !== "string") continue;
+    // Drop pnpm lifecycle vars and pnpm-specific npm_config_* that cause warnings
+    if (PNPM_CONFIG_KEYS.has(key.toLowerCase())) continue;
+    // Also drop pnpm-specific config keys not meant for regular npm
+    if (key.toLowerCase().startsWith("npm_config_") && (
+      key.toLowerCase().includes("jsr") ||
+      key.toLowerCase().includes("catalog") ||
+      key.toLowerCase().includes("release_age") ||
+      key.toLowerCase().includes("globalconfig") ||
+      key.toLowerCase().includes("verify_deps")
+    )) continue;
+    filteredEnv[key] = val;
+  }
+
+  return {
+    ...filteredEnv,
+    PATH: [...pathSet].filter(Boolean).join(path.delimiter),
+    NPM_CONFIG_UPDATE_NOTIFIER: "false",
+    NPM_CONFIG_PROGRESS: "true",
+    PYTHONUNBUFFERED: "1",
+  };
+}
+
+// Port detection from server output — same patterns as devServerRegistry
+const PORT_PATTERNS = [
+  /localhost:(\d{4,5})/i,
+  /127\.0\.0\.1:(\d{4,5})/i,
+  /0\.0\.0\.0:(\d{4,5})/i,
+  /\bport[:\s]+(\d{4,5})/i,
+  /listening.*?:(\d{4,5})/i,
+  /started.*?:(\d{4,5})/i,
+  /running.*?:(\d{4,5})/i,
+  /server.*?:(\d{4,5})/i,
+  /:(\d{4,5})\b/,
+];
+
+function detectPort(text: string): number | null {
+  for (const pattern of PORT_PATTERNS) {
+    const match = text.match(pattern);
+    if (match) {
+      const port = parseInt(match[1], 10);
+      if (port >= 1024 && port <= 65535) return port;
+    }
+  }
+  return null;
+}
+
+function enrichStderr(stderr: string, exitCode: number, normalized: string): string {
+  let enriched = stderr;
+  const notFoundMatch = enriched.match(
+    /(?:sh|bash|zsh):\s*\d*:?\s*([^\s:]+):\s*(?:not found|command not found|No such file)/
+  );
+  const missingTool = notFoundMatch ? notFoundMatch[1] : null;
+  if (exitCode === 127 || missingTool) {
+    const tool = missingTool ?? normalized.split(" ")[0];
+    let hint = `\n⚠️  "${tool}" não encontrado.\n`;
+    const npmLocalTools = ["tsx", "ts-node", "vite", "react-scripts", "next", "tsc", "eslint", "prettier", "jest", "vitest", "esbuild", "rollup", "webpack"];
+    if (npmLocalTools.includes(tool)) {
+      hint += `   Este comando faz parte das dependências do projeto.\n   💡 Rode primeiro: npm install`;
+    } else if (["npm", "node", "npx"].includes(tool)) {
+      hint += `   O Node.js/npm não está disponível neste servidor.`;
+    } else if (["python", "python3", "pip3"].includes(tool)) {
+      hint += `   Python não está disponível neste ambiente.\n   Este servidor suporta apenas Node.js/npm.`;
+    } else {
+      hint += `   Verifique se está instalada ou tente: npm install -g ${tool}`;
+    }
+    enriched = (enriched ? enriched + "\n" : "") + hint;
+  }
+  return enriched;
+}
+
+// ── Streaming exec via SSE ─────────────────────────────────────────────────────
+// Streams output line by line. Also detects if the command starts a server:
+// when a port number appears in output, we hand off the process to devServerRegistry
+// so it stays alive even after the browser disconnects from the SSE stream.
+router.post("/projects/:projectId/exec-stream", async (req, res): Promise<void> => {
+  const id = parseInt(req.params.projectId, 10);
+  if (isNaN(id)) { res.status(400).json({ error: "Invalid project ID" }); return; }
+
+  const parsed = ExecCommandBody.safeParse(req.body);
+  if (!parsed.success) { res.status(400).json({ error: parsed.error.message }); return; }
+
+  const { command } = parsed.data;
+  if (isCommandBlocked(command)) { res.status(400).json({ error: "Comando bloqueado por segurança." }); return; }
+
+  const [project] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+
+  await ensureProjectOnDisk(project.id, project.storagePath);
+
+  const normalized = normalizeCommand(command);
+  const isInstallCmd = /^(npm\s+install|npm\s+i\b|yarn\s+install|yarn\b|pnpm\s+install|pip3?\s+install|poetry\s+install|composer\s+install|bundle\s+install|cargo\s+build|go\s+get)/.test(normalized.trim());
+  const isBuildCmd = /^(npm\s+run\s+build|vite\s+build|next\s+build|tsc\b)/.test(normalized.trim());
+  const maxTimeout = isInstallCmd ? 600_000 : isBuildCmd ? 300_000 : 120_000;
+
+  const cwd = path.resolve(project.storagePath);
+  const start = Date.now();
+
+  // SSE headers
+  res.setHeader("Content-Type", "text/event-stream");
+  res.setHeader("Cache-Control", "no-cache");
+  res.setHeader("Connection", "keep-alive");
+  res.setHeader("X-Accel-Buffering", "no");
+  res.flushHeaders();
+
+  const send = (type: string, payload: object) => {
+    try { res.write(`data: ${JSON.stringify({ type, ...payload })}\n\n`); } catch { /* client disconnected */ }
+  };
+
+  const proc = spawnShell(normalized, {
+    cwd,
+    env: buildEnv(),
+    stdio: ["pipe", "pipe", "pipe"],
+  });
+
+  let stderrBuffer = "";
+  let detectedPort: number | null = null;
+  let logBuffer: string[] = [];
+  let clientDisconnected = false;
+
+  const PORT_QUESTION_RE = [
+    /port.*(?:in use|already|busy|taken).*(?:use|try|switch|another)/i,
+    /is in use.*would you like/i,
+    /already in use.*use.*instead/i,
+    /EADDRINUSE/i,
+    /\?\s*(?:›|>)?\s*(?:y\/n|yes\/no|\(Y\/n\))/i,
+  ];
+
+  const INTERACTIVE_QUESTION_RE = [
+    /\?\s*(?:›|>)\s*(?:Use|Router|TypeScript|CSS|Tailwind|ESLint|App Router|Pages)/i,
+    /Would you like to use/i,
+    /Do you want to/i,
+    /\?\s*»\s/,
+    /\(Y\/n\)/i,
+    /\[y\/N\]/i,
+    /\[Y\/n\]/i,
+    /Yes\s*\/\s*No/i,
+    /Press\s+(?:Enter|Return)/i,
+  ];
+
+  const handleChunk = (chunk: Buffer, streamType: "stdout" | "stderr") => {
+    const text = chunk.toString();
+    logBuffer.push(text);
+    send(streamType, { data: text });
+
+    if (PORT_QUESTION_RE.some((p) => p.test(text))) {
+      try { proc.stdin?.write("y\n"); } catch {}
+      send("stdout", { data: "\n[auto] Porta ocupada — aceitando automaticamente.\n" });
+    }
+
+    if (INTERACTIVE_QUESTION_RE.some((p) => p.test(text))) {
+      try { proc.stdin?.write("\n"); } catch {}
+      send("stdout", { data: "\n[auto] Pergunta interativa — aceitando padrão.\n" });
+    }
+
+    const port = detectPort(text);
+    if (port !== null) {
+      if (detectedPort === null) {
+        detectedPort = port;
+        registerTerminalProcess(id, proc, port, normalized, [...logBuffer]);
+        send("server_detected", { port });
+      } else if (port !== detectedPort) {
+        detectedPort = port;
+        registerTerminalProcess(id, proc, port, normalized, [...logBuffer]);
+        send("server_detected", { port });
+      }
+    }
+
+    if (streamType === "stderr") stderrBuffer += text;
+  };
+
+  proc.stdout.on("data", (chunk: Buffer) => handleChunk(chunk, "stdout"));
+  proc.stderr.on("data", (chunk: Buffer) => handleChunk(chunk, "stderr"));
+
+  proc.on("error", (err) => {
+    send("stderr", { data: `\nErro ao iniciar processo: ${err.message}\n` });
+  });
+
+  proc.on("close", (code, signal) => {
+    const exitCode = code ?? (signal ? 1 : 0);
+    const durationMs = Date.now() - start;
+
+    // Only send enriched stderr / exit if not handed off (server processes run forever)
+    if (detectedPort === null) {
+      const enriched = enrichStderr(stderrBuffer, exitCode, normalized);
+      const extraHint = enriched.slice(stderrBuffer.length);
+      if (extraHint) send("stderr", { data: extraHint });
+      if (signal === "SIGTERM" && durationMs >= maxTimeout - 1000) {
+        send("stderr", { data: `\n\n⏱️  Comando interrompido após ${Math.round(durationMs / 1000)}s (limite atingido).` });
+      }
+      send("exit", { exitCode, durationMs });
+    } else {
+      // Server was killed externally (Ctrl+C or stopDevServer)
+      send("server_stopped", { exitCode, durationMs });
+    }
+    if (!clientDisconnected) res.end();
+  });
+
+  const timer = setTimeout(() => {
+    if (detectedPort === null) {
+      try { proc.kill("SIGTERM"); } catch {}
+    }
+  }, maxTimeout);
+
+  proc.on("close", () => clearTimeout(timer));
+
+  // When client disconnects from SSE:
+  // - If server was detected (process handed off to registry) → DON'T kill the process
+  // - Otherwise → kill the process
+  req.on("close", () => {
+    clientDisconnected = true;
+    if (detectedPort === null) {
+      try { proc.kill("SIGTERM"); } catch {}
+      clearTimeout(timer);
+    }
+    // If detectedPort is set, process lives on in devServerRegistry
+  });
+});
+
+// ── Legacy batch exec ──────────────────────────────────────────────────────────
+router.post("/projects/:projectId/exec", async (req, res): Promise<void> => {
+  const id = parseInt(req.params.projectId, 10);
+  if (isNaN(id)) { res.status(400).json({ error: "Invalid project ID" }); return; }
+
+  const parsed = ExecCommandBody.safeParse(req.body);
+  if (!parsed.success) { res.status(400).json({ error: parsed.error.message }); return; }
+
+  const { command } = parsed.data;
+  if (isCommandBlocked(command)) { res.status(400).json({ error: "Comando bloqueado por segurança." }); return; }
+
+  const [project] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+
+  await ensureProjectOnDisk(project.id, project.storagePath);
+
+  const normalized = normalizeCommand(command);
+  const isInstallCmd = /^(npm\s+install|npm\s+i\b|yarn|pnpm\s+install|pip3?\s+install)/.test(normalized.trim());
+  const timeout = isInstallCmd ? 600_000 : 120_000;
+  const cwd = path.resolve(project.storagePath);
+  const start = Date.now();
+
+  const proc = spawnShell(normalized, { cwd, env: buildEnv(), stdio: ["ignore", "pipe", "pipe"] });
+  let stdout = "";
+  let stderr = "";
+  proc.stdout.on("data", (d: Buffer) => { stdout += d.toString(); });
+  proc.stderr.on("data", (d: Buffer) => { stderr += d.toString(); });
+
+  const timer = setTimeout(() => { try { proc.kill("SIGTERM"); } catch {} }, timeout);
+
+  proc.on("close", (code) => {
+    clearTimeout(timer);
+    const exitCode = code ?? 1;
+    const enriched = enrichStderr(stderr, exitCode, normalized);
+    res.json({ stdout, stderr: enriched, exitCode, durationMs: Date.now() - start });
+  });
+
+  proc.on("error", () => {
+    clearTimeout(timer);
+    res.json({ stdout, stderr: "Erro ao iniciar o processo.", exitCode: 1, durationMs: Date.now() - start });
+  });
+});
+
+export default router;
+===== FIM: server/routes/exec.ts =====
+
+===== ARQUIVO: server/routes/files.ts =====
+import { Router, type IRouter } from "express";
+import { eq } from "drizzle-orm";
+import { db, projectsTable } from "@workspace/db";
+import { GetFileContentQueryParams, WriteFileBody, DeleteFileQueryParams } from "@workspace/api-zod";
+import { detectLanguage, isBinaryFile } from "../lib/storage.js";
+import { dbSaveFile, dbDeleteFile, ensureProjectOnDisk } from "../lib/persistFiles.js";
+import path from "path";
+import fs from "fs/promises";
+import { z } from "zod";
+
+const router: IRouter = Router();
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+async function resolveProjectPath(
+  projectId: string,
+  filePath: string
+): Promise<{ projectDbId: number; storagePath: string; fullPath: string } | null> {
+  const id = parseInt(projectId, 10);
+  if (isNaN(id)) return null;
+  const [project] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  if (!project) return null;
+  // Restore from DB if /tmp directory was wiped
+  await ensureProjectOnDisk(project.id, project.storagePath);
+  const normalized = filePath.replace(/^\/+/, "");
+  const fullPath = path.join(project.storagePath, normalized);
+  const resolved = path.resolve(fullPath);
+  const base = path.resolve(project.storagePath);
+  if (!resolved.startsWith(base)) return null;
+  return { projectDbId: project.id, storagePath: project.storagePath, fullPath };
+}
+
+async function copyRecursive(src: string, dest: string): Promise<void> {
+  const stat = await fs.stat(src);
+  if (stat.isDirectory()) {
+    await fs.mkdir(dest, { recursive: true });
+    const entries = await fs.readdir(src);
+    await Promise.all(entries.map((e) => copyRecursive(path.join(src, e), path.join(dest, e))));
+  } else {
+    await fs.mkdir(path.dirname(dest), { recursive: true });
+    await fs.copyFile(src, dest);
+  }
+}
+
+// ─── GET — read file content ──────────────────────────────────────────────────
+
+router.get("/projects/:projectId/files", async (req, res): Promise<void> => {
+  const raw = Array.isArray(req.params.projectId) ? req.params.projectId[0] : req.params.projectId;
+  const id = parseInt(raw, 10);
+  if (isNaN(id)) { res.status(400).json({ error: "Invalid project ID" }); return; }
+
+  const queryParsed = GetFileContentQueryParams.safeParse(req.query);
+  if (!queryParsed.success) { res.status(400).json({ error: queryParsed.error.message }); return; }
+
+  const filePath = queryParsed.data.path;
+  const [project] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  if (!project) { res.status(404).json({ error: "Project not found" }); return; }
+
+  const normalizedPath = filePath.replace(/^\//, "");
+  const fullPath = path.join(project.storagePath, normalizedPath);
+  const resolved = path.resolve(fullPath);
+  const base = path.resolve(project.storagePath);
+  if (!resolved.startsWith(base)) { res.status(400).json({ error: "Invalid path" }); return; }
+
+  try {
+    const stat = await fs.stat(fullPath);
+    if (!stat.isFile()) { res.status(400).json({ error: "Path is not a file" }); return; }
+  } catch { res.status(404).json({ error: "File not found" }); return; }
+
+  const binary = isBinaryFile(filePath);
+  const language = detectLanguage(filePath);
+
+  if (binary) {
+    res.json({ path: filePath, content: "[Binary file - content not available]", language: "plaintext", isBinary: true });
+    return;
+  }
+
+  try {
+    const buffer = await fs.readFile(fullPath);
+    res.json({ path: filePath, content: buffer.toString("utf-8"), language, isBinary: false });
+  } catch { res.status(500).json({ error: "Could not read file" }); }
+});
+
+// ─── PUT — write / create file ────────────────────────────────────────────────
+
+router.put("/projects/:projectId/files", async (req, res): Promise<void> => {
+  const parsed = WriteFileBody.safeParse(req.body);
+  if (!parsed.success) { res.status(400).json({ error: parsed.error.message }); return; }
+
+  const { path: filePath, content } = parsed.data;
+  const resolved = await resolveProjectPath(req.params.projectId, filePath);
+  if (!resolved) { res.status(400).json({ error: "Invalid project or path" }); return; }
+
+  await fs.mkdir(path.dirname(resolved.fullPath), { recursive: true });
+  await fs.writeFile(resolved.fullPath, content, "utf-8");
+  // Persist to DB so file survives server restarts
+  await dbSaveFile(resolved.projectDbId, filePath, content);
+  res.json({ path: filePath, message: "Arquivo salvo com sucesso" });
+});
+
+// ─── DELETE — delete file OR folder ──────────────────────────────────────────
+
+router.delete("/projects/:projectId/files", async (req, res): Promise<void> => {
+  const queryParsed = DeleteFileQueryParams.safeParse(req.query);
+  if (!queryParsed.success) { res.status(400).json({ error: queryParsed.error.message }); return; }
+
+  const resolved = await resolveProjectPath(req.params.projectId, queryParsed.data.path);
+  if (!resolved) { res.status(400).json({ error: "Invalid project or path" }); return; }
+
+  try {
+    const stat = await fs.stat(resolved.fullPath);
+    if (stat.isDirectory()) {
+      await fs.rm(resolved.fullPath, { recursive: true, force: true });
+    } else {
+      await fs.unlink(resolved.fullPath);
+    }
+    // Remove from DB too
+    await dbDeleteFile(resolved.projectDbId, queryParsed.data.path);
+    res.status(204).send();
+  } catch { res.status(404).json({ error: "Arquivo ou pasta não encontrado" }); }
+});
+
+// ─── POST /mkdir — create folder ─────────────────────────────────────────────
+
+const MkdirBody = z.object({ path: z.string().min(1) });
+
+router.post("/projects/:projectId/files/mkdir", async (req, res): Promise<void> => {
+  const parsed = MkdirBody.safeParse(req.body);
+  if (!parsed.success) { res.status(400).json({ error: "Campo 'path' é obrigatório" }); return; }
+
+  const resolved = await resolveProjectPath(req.params.projectId, parsed.data.path);
+  if (!resolved) { res.status(400).json({ error: "Invalid project or path" }); return; }
+
+  await fs.mkdir(resolved.fullPath, { recursive: true });
+  res.json({ path: parsed.data.path, message: "Pasta criada com sucesso" });
+});
+
+// ─── PATCH /rename — rename or move file/folder ───────────────────────────────
+
+const RenameBody = z.object({ from: z.string().min(1), to: z.string().min(1) });
+
+router.patch("/projects/:projectId/files", async (req, res): Promise<void> => {
+  const parsed = RenameBody.safeParse(req.body);
+  if (!parsed.success) { res.status(400).json({ error: "Campos 'from' e 'to' são obrigatórios" }); return; }
+
+  const src = await resolveProjectPath(req.params.projectId, parsed.data.from);
+  const dest = await resolveProjectPath(req.params.projectId, parsed.data.to);
+  if (!src || !dest) { res.status(400).json({ error: "Invalid project or path" }); return; }
+
+  try {
+    await fs.stat(src.fullPath);
+  } catch { res.status(404).json({ error: "Origem não encontrada" }); return; }
+
+  await fs.mkdir(path.dirname(dest.fullPath), { recursive: true });
+  await fs.rename(src.fullPath, dest.fullPath);
+  res.json({ from: parsed.data.from, to: parsed.data.to, message: "Renomeado com sucesso" });
+});
+
+// ─── POST /copy — copy file or folder ────────────────────────────────────────
+
+const CopyBody = z.object({ from: z.string().min(1), to: z.string().min(1) });
+
+router.post("/projects/:projectId/files/copy", async (req, res): Promise<void> => {
+  const parsed = CopyBody.safeParse(req.body);
+  if (!parsed.success) { res.status(400).json({ error: "Campos 'from' e 'to' são obrigatórios" }); return; }
+
+  const src = await resolveProjectPath(req.params.projectId, parsed.data.from);
+  const dest = await resolveProjectPath(req.params.projectId, parsed.data.to);
+  if (!src || !dest) { res.status(400).json({ error: "Invalid project or path" }); return; }
+
+  try {
+    await fs.stat(src.fullPath);
+  } catch { res.status(404).json({ error: "Origem não encontrada" }); return; }
+
+  try {
+    await copyRecursive(src.fullPath, dest.fullPath);
+    res.json({ from: parsed.data.from, to: parsed.data.to, message: "Copiado com sucesso" });
+  } catch (e: any) {
+    res.status(500).json({ error: e.message ?? "Erro ao copiar" });
+  }
+});
+
+export default router;
+===== FIM: server/routes/files.ts =====
+
+===== ARQUIVO: server/routes/git.ts =====
+/**
+ * Histórico (Git) do projeto — ver versões antigas, procurar texto em todas
+ * as versões, ver/restaurar um arquivo como era e baixar uma versão inteira.
+ * Usa o programa "git" instalado no computador (sem shell: argumentos
+ * separados, nada é interpretado pelo terminal).
+ */
+import { Router, type IRouter, type Response } from "express";
+import { eq } from "drizzle-orm";
+import { db, projectsTable } from "@workspace/db";
+import { execFile, spawn } from "child_process";
+import multer from "multer";
+import path from "path";
+import os from "os";
+import fs from "fs/promises";
+import { randomUUID } from "crypto";
+import { dbSaveFile } from "../lib/persistFiles.js";
+
+const router: IRouter = Router();
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 1024 * 1024 * 1024 } });
+
+const SEM_GIT = "O programa Git não está instalado neste computador. No Prompt de Comando, rode: winget install Git.Git — depois feche e abra o CodeLens de novo.";
+const HASH = /^[0-9a-fA-F]{4,40}$/;
+
+function git(cwd: string, args: string[], maxBuffer = 64 * 1024 * 1024): Promise<string> {
+  return new Promise((ok, falha) => {
+    execFile("git", ["-c", "core.quotepath=off", "-c", "i18n.logOutputEncoding=utf-8", ...args], { cwd, maxBuffer, windowsHide: true, encoding: "utf8" }, (err, stdout, stderr) => {
+      if (err) {
+        const e = err as NodeJS.ErrnoException & { code?: string | number };
+        if (e.code === "ENOENT") return falha(Object.assign(new Error(SEM_GIT), { status: 503 }));
+        return falha(Object.assign(new Error((stderr || e.message || "erro no git").toString().trim()), { status: 400 }));
+      }
+      ok(stdout);
+    });
+  });
+}
+
+async function pastaDoProjeto(projectId: string): Promise<{ id: number; dir: string } | null> {
+  const id = parseInt(projectId, 10);
+  if (isNaN(id)) return null;
+  const [p] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  return p ? { id: p.id, dir: p.storagePath } : null;
+}
+
+function caminhoSeguro(p: unknown): string | null {
+  if (typeof p !== "string" || !p || p.length > 500) return null;
+  const n = p.replace(/\\/g, "/").replace(/^\/+/, "");
+  if (n.split("/").some((x) => x === ".." ) || path.isAbsolute(n)) return null;
+  return n;
+}
+
+function erro(res: Response, e: unknown) {
+  const err = e as Error & { status?: number };
+  res.status(err.status || 500).json({ error: err.message || String(e) });
+}
+
+async function ehRepo(dir: string): Promise<boolean> {
+  try { return (await git(dir, ["rev-parse", "--is-inside-work-tree"])).trim() === "true"; } catch (e) { if ((e as Error).message === SEM_GIT) throw e; return false; }
+}
+
+const FMT = "%x1e%H%x1f%h%x1f%aI%x1f%an%x1f%s%x1f%D";
+function lerCommits(txt: string) {
+  return txt.split("\x1e").map((b) => b.trim()).filter(Boolean).map((b) => {
+    const [linha, ...resto] = b.split("\n");
+    const [hash, curto, data, autor, assunto, refs] = linha.split("\x1f");
+    const stat = resto.join(" ");
+    const arquivos = Number((/(\d+) files? changed/.exec(stat) || [])[1] || 0);
+    const mais = Number((/(\d+) insertions?/.exec(stat) || [])[1] || 0);
+    const menos = Number((/(\d+) deletions?/.exec(stat) || [])[1] || 0);
+    return { hash, curto, data, autor, assunto, refs: refs || "", arquivos, mais, menos };
+  }).filter((c) => c.hash && HASH.test(c.hash));
+}
+
+// ── situação ──────────────────────────────────────────────────────────────────
+router.get("/projects/:projectId/git/info", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    let versao = "";
+    try { versao = (await git(p.dir, ["--version"])).trim(); } catch (e) { if ((e as Error).message === SEM_GIT) { res.json({ git: false, repo: false, mensagem: SEM_GIT }); return; } }
+    const repo = await ehRepo(p.dir);
+    if (!repo) { res.json({ git: true, versao, repo: false }); return; }
+    const total = Number((await git(p.dir, ["rev-list", "--all", "--count"]).catch(() => "0")).trim()) || 0;
+    const ramo = (await git(p.dir, ["rev-parse", "--abbrev-ref", "HEAD"]).catch(() => "")).trim();
+    const mudados = (await git(p.dir, ["status", "--porcelain"]).catch(() => "")).split("\n").filter(Boolean).length;
+    res.json({ git: true, versao, repo: true, total, ramo, mudados });
+  } catch (e) { erro(res, e); }
+});
+
+// ── lista de versões ─────────────────────────────────────────────────────────
+router.get("/projects/:projectId/git/log", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const limite = Math.min(5000, Math.max(1, Number(req.query.limite) || 1000));
+    const txt = await git(p.dir, ["log", "--all", "--date-order", "-n", String(limite), "--format=" + FMT, "--shortstat"]);
+    res.json({ commits: lerCommits(txt) });
+  } catch (e) { erro(res, e); }
+});
+
+// ── procurar um texto em todas as versões ─────────────────────────────────────
+router.get("/projects/:projectId/git/procurar", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const q = String(req.query.q || ""); if (!q || q.length > 200) { res.status(400).json({ error: "Escreva o texto a procurar (até 200 letras)." }); return; }
+    // versões em que o texto entrou ou saiu
+    const commits = lerCommits(await git(p.dir, ["log", "--all", "--date-order", "-S", q, "--format=" + FMT, "--shortstat"]));
+    // em cada uma, quais arquivos têm o texto
+    const resultado = [];
+    for (const c of commits.slice(0, 80)) {
+      let arquivos: string[] = [];
+      try { arquivos = (await git(p.dir, ["grep", "-I", "-l", "-F", "-i", "-e", q, c.hash])).split("\n").filter(Boolean).map((l) => l.slice(c.hash.length + 1)); } catch { arquivos = []; }
+      resultado.push({ ...c, comTexto: arquivos.slice(0, 200), textoSaiu: arquivos.length === 0 });
+    }
+    res.json({ q, commits: resultado, total: commits.length });
+  } catch (e) { erro(res, e); }
+});
+
+// ── o que mudou numa versão ──────────────────────────────────────────────────
+router.get("/projects/:projectId/git/mudancas", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const h = String(req.query.hash || ""); if (!HASH.test(h)) { res.status(400).json({ error: "Versão inválida" }); return; }
+    const txt = await git(p.dir, ["show", "--name-status", "--format=", "-M", h]);
+    const mudancas = txt.split("\n").filter(Boolean).map((l) => { const [st, ...ps] = l.split("\t"); return { status: st[0], caminho: ps[ps.length - 1], antes: ps.length > 1 ? ps[0] : undefined }; });
+    res.json({ mudancas });
+  } catch (e) { erro(res, e); }
+});
+
+// ── todos os arquivos de uma versão ──────────────────────────────────────────
+router.get("/projects/:projectId/git/arquivos", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const h = String(req.query.hash || ""); if (!HASH.test(h)) { res.status(400).json({ error: "Versão inválida" }); return; }
+    res.json({ arquivos: (await git(p.dir, ["ls-tree", "-r", "--name-only", h])).split("\n").filter(Boolean) });
+  } catch (e) { erro(res, e); }
+});
+
+// ── um arquivo como era numa versão ──────────────────────────────────────────
+router.get("/projects/:projectId/git/ver", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const h = String(req.query.hash || ""), c = caminhoSeguro(req.query.caminho); if (!HASH.test(h) || !c) { res.status(400).json({ error: "Versão ou arquivo inválido" }); return; }
+    const conteudo = await git(p.dir, ["show", `${h}:${c}`]);
+    res.json({ conteudo, binario: conteudo.includes("\u0000") });
+  } catch (e) { erro(res, e); }
+});
+
+// ── diferenças de um arquivo nessa versão (em relação à anterior) ────────────
+router.get("/projects/:projectId/git/diferencas", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const h = String(req.query.hash || ""), c = caminhoSeguro(req.query.caminho); if (!HASH.test(h)) { res.status(400).json({ error: "Versão inválida" }); return; }
+    const args = ["show", "--format=", "--no-color", h]; if (c) args.push("--", c);
+    res.json({ diff: await git(p.dir, args) });
+  } catch (e) { erro(res, e); }
+});
+
+// ── restaurar um arquivo daquela versão ──────────────────────────────────────
+router.post("/projects/:projectId/git/restaurar", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const h = String(req.body?.hash || ""), c = caminhoSeguro(req.body?.caminho), modo = req.body?.modo === "substituir" ? "substituir" : "copia";
+    if (!HASH.test(h) || !c) { res.status(400).json({ error: "Versão ou arquivo inválido" }); return; }
+    const conteudo = await git(p.dir, ["show", `${h}:${c}`]);
+    let destino = c;
+    if (modo === "copia") { const ext = path.posix.extname(c); destino = (ext ? c.slice(0, -ext.length) : c) + ".versao-" + h.slice(0, 7) + ext; }
+    const cheio = path.resolve(p.dir, destino); if (!cheio.startsWith(path.resolve(p.dir))) { res.status(400).json({ error: "Destino inválido" }); return; }
+    await fs.mkdir(path.dirname(cheio), { recursive: true });
+    await fs.writeFile(cheio, conteudo, "utf-8");
+    try { await dbSaveFile(p.id, destino, conteudo); } catch { /* o arquivo já está no disco */ }
+    res.json({ ok: true, destino });
+  } catch (e) { erro(res, e); }
+});
+
+// ── baixar uma versão inteira em .zip ────────────────────────────────────────
+router.get("/projects/:projectId/git/zip", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const h = String(req.query.hash || ""); if (!HASH.test(h)) { res.status(400).json({ error: "Versão inválida" }); return; }
+    res.setHeader("Content-Type", "application/zip");
+    res.setHeader("Content-Disposition", `attachment; filename="versao-${h.slice(0, 7)}.zip"`);
+    const pr = spawn("git", ["archive", "--format=zip", h], { cwd: p.dir, windowsHide: true });
+    pr.on("error", (e) => { if (!res.headersSent) erro(res, e); else res.end(); });
+    pr.stdout.pipe(res);
+  } catch (e) { erro(res, e); }
+});
+
+// ── relatório de todo o histórico ────────────────────────────────────────────
+router.get("/projects/:projectId/git/relatorio", async (req, res) => {
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    const txt = await git(p.dir, ["log", "--all", "--date-order", "--date=format:%d/%m/%Y %H:%M", "--format=========================================%nVersão %h  |  %ad  |  %an%n%s%n", "--stat=160"]);
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("Content-Disposition", 'attachment; filename="relatorio-historico.txt"');
+    res.send("RELATÓRIO DO HISTÓRICO DO PROJETO\nGerado em " + new Date().toLocaleString("pt-BR") + "\n\n" + txt);
+  } catch (e) { erro(res, e); }
+});
+
+// ── trazer o histórico de um arquivo .bundle (feito com "git bundle create") ─
+router.post("/projects/:projectId/git/importar-bundle", upload.single("file"), async (req, res) => {
+  const tmp = path.join(os.tmpdir(), "codelens-" + randomUUID() + ".bundle");
+  try {
+    const p = await pastaDoProjeto(req.params.projectId); if (!p) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+    if (!req.file) { res.status(400).json({ error: "Escolha o arquivo .bundle" }); return; }
+    await fs.writeFile(tmp, req.file.buffer);
+    if (!(await ehRepo(p.dir))) await git(p.dir, ["init"]);
+    await git(p.dir, ["bundle", "verify", tmp]).catch((e) => { throw Object.assign(new Error("Este arquivo não é um histórico válido (.bundle): " + (e as Error).message), { status: 400 }); });
+    // traz todas as versões para "importado/…", sem mexer nos arquivos atuais
+    await git(p.dir, ["fetch", "--no-tags", tmp, "+refs/*:refs/importado/*"]);
+    const total = Number((await git(p.dir, ["rev-list", "--all", "--count"])).trim()) || 0;
+    res.json({ ok: true, total });
+  } catch (e) { erro(res, e); }
+  finally { fs.unlink(tmp).catch(() => {}); }
+});
+
+export default router;
+===== FIM: server/routes/git.ts =====
+
+===== ARQUIVO: server/routes/github.ts =====
+import { Router, type IRouter } from "express";
+import { eq } from "drizzle-orm";
+import { db, projectsTable, settingsTable } from "@workspace/db";
+import { CreateGithubRepoBody } from "@workspace/api-zod";
+import { isBinaryFile } from "../lib/storage.js";
+import { Octokit } from "@octokit/rest";
+import path from "path";
+import fs from "fs/promises";
+
+const router: IRouter = Router();
+
+interface FileToCommit {
+  path: string;
+  content: string;
+  encoding: "utf-8" | "base64";
+}
+
+async function collectAllFiles(dir: string, prefix: string, files: FileToCommit[]): Promise<void> {
+  const entries = await fs.readdir(dir);
+  for (const entry of entries) {
+    if (entry.startsWith(".") || entry === "node_modules") continue;
+    const fullPath = path.join(dir, entry);
+    const rel = prefix ? `${prefix}/${entry}` : entry;
+    const stat = await fs.stat(fullPath);
+    if (stat.isDirectory()) {
+      await collectAllFiles(fullPath, rel, files);
+    } else {
+      const binary = isBinaryFile(entry);
+      if (binary) {
+        const buf = await fs.readFile(fullPath);
+        files.push({ path: rel, content: buf.toString("base64"), encoding: "base64" });
+      } else {
+        try {
+          const buf = await fs.readFile(fullPath);
+          files.push({ path: rel, content: buf.toString("utf-8"), encoding: "utf-8" });
+        } catch {
+          const buf = await fs.readFile(fullPath);
+          files.push({ path: rel, content: buf.toString("base64"), encoding: "base64" });
+        }
+      }
+    }
+  }
+}
+
+router.post("/github/create-repo", async (req, res): Promise<void> => {
+  const parsed = CreateGithubRepoBody.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ error: parsed.error.message });
+    return;
+  }
+
+  const { projectId, repoName, description, isPrivate } = parsed.data;
+
+  const id = parseInt(projectId, 10);
+  if (isNaN(id)) {
+    res.status(400).json({ error: "Invalid project ID" });
+    return;
+  }
+
+  const [project] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  if (!project) {
+    res.status(404).json({ error: "Project not found" });
+    return;
+  }
+
+  const settingsRows = await db.select().from(settingsTable).limit(1);
+  const settings = settingsRows[0];
+
+  if (!settings?.githubToken) {
+    res.status(400).json({ error: "GitHub token not configured. Please go to Settings." });
+    return;
+  }
+
+  const octokit = new Octokit({ auth: settings.githubToken });
+
+  try {
+    // Verify token first
+    let user: { login: string };
+    try {
+      const { data } = await octokit.rest.users.getAuthenticated();
+      user = data;
+    } catch (authErr: any) {
+      const status = authErr?.status ?? 0;
+      if (status === 401 || status === 403) {
+        res.status(400).json({ error: "Token GitHub inválido ou sem permissão. Verifique o token em Configurações." });
+      } else {
+        res.status(400).json({ error: "Não foi possível autenticar no GitHub. Verifique sua conexão e o token." });
+      }
+      return;
+    }
+
+    let repo: { html_url: string; full_name: string };
+    try {
+      const { data } = await octokit.rest.repos.createForAuthenticatedUser({
+        name: repoName,
+        description: description ?? undefined,
+        private: isPrivate,
+        auto_init: false,
+      });
+      repo = data;
+    } catch (createErr: any) {
+      const status = createErr?.status ?? 0;
+      if (status === 422) {
+        res.status(400).json({ error: `Repositório "${repoName}" já existe na conta ${user.login}. Escolha outro nome.` });
+      } else {
+        res.status(400).json({ error: createErr?.message ?? "Falha ao criar repositório no GitHub." });
+      }
+      return;
+    }
+
+    const files: FileToCommit[] = [];
+    await collectAllFiles(project.storagePath, "", files);
+
+    if (files.length === 0) {
+      res.status(400).json({ error: "No files found in project" });
+      return;
+    }
+
+    const treeItems = await Promise.all(
+      files.map(async (f) => {
+        const { data: blob } = await octokit.rest.git.createBlob({
+          owner: user.login,
+          repo: repoName,
+          content: f.content,
+          encoding: f.encoding,
+        });
+        return {
+          path: f.path,
+          mode: "100644" as const,
+          type: "blob" as const,
+          sha: blob.sha,
+        };
+      })
+    );
+
+    const { data: tree } = await octokit.rest.git.createTree({
+      owner: user.login,
+      repo: repoName,
+      tree: treeItems,
+    });
+
+    const { data: commit } = await octokit.rest.git.createCommit({
+      owner: user.login,
+      repo: repoName,
+      message: `Initial commit from CodeLens - ${project.name}`,
+      tree: tree.sha,
+      parents: [],
+    });
+
+    await octokit.rest.git.createRef({
+      owner: user.login,
+      repo: repoName,
+      ref: "refs/heads/main",
+      sha: commit.sha,
+    });
+
+    res.json({
+      repoUrl: repo.html_url,
+      repoName: repo.full_name,
+      filesCommitted: files.length,
+    });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "GitHub API error";
+    req.log.error({ err }, "GitHub repo creation failed");
+    res.status(400).json({ error: message });
+    return;
+  }
+});
+
+
+// ════════════════════════════════════════════════════════════════════════════
+// Conta do GitHub salva (como no SK): token guardado uma vez, nome na tela,
+// lista dos repositórios, importar e ENVIAR para um repositório que já existe.
+// ════════════════════════════════════════════════════════════════════════════
+async function tokenSalvo(): Promise<string | null> {
+  const [row] = await db.select().from(settingsTable).limit(1);
+  return row?.githubToken?.trim() || null;
+}
+async function contaDe(token: string) {
+  const { data } = await new Octokit({ auth: token }).rest.users.getAuthenticated();
+  return { conectado: true, login: data.login, nome: data.name || data.login, avatar: data.avatar_url };
+}
+
+router.get("/github/conta", async (_req, res): Promise<void> => {
+  const t = await tokenSalvo();
+  if (!t) { res.json({ conectado: false }); return; }
+  try { res.json(await contaDe(t)); }
+  catch (e: any) { res.json({ conectado: false, erro: e?.status === 401 ? "O token salvo venceu ou foi apagado no GitHub. Cole um novo." : "Não consegui falar com o GitHub (sem internet?)." }); }
+});
+
+router.post("/github/token", async (req, res): Promise<void> => {
+  const token = String(req.body?.token || "").trim();
+  if (!token) { res.status(400).json({ error: "Cole o token." }); return; }
+  let conta;
+  try { conta = await contaDe(token); }
+  catch (e: any) { res.status(400).json({ error: e?.status === 401 ? "Token recusado pelo GitHub. Confira se copiou inteiro." : "Não consegui falar com o GitHub." }); return; }
+  const [row] = await db.select().from(settingsTable).limit(1);
+  if (row) await db.update(settingsTable).set({ githubToken: token, updatedAt: new Date() }).where(eq(settingsTable.id, row.id));
+  else await db.insert(settingsTable).values({ githubToken: token });
+  res.json(conta);
+});
+
+router.delete("/github/token", async (_req, res): Promise<void> => {
+  const [row] = await db.select().from(settingsTable).limit(1);
+  if (row) await db.update(settingsTable).set({ githubToken: null, updatedAt: new Date() }).where(eq(settingsTable.id, row.id));
+  res.json({ conectado: false });
+});
+
+router.get("/github/repos", async (_req, res): Promise<void> => {
+  const t = await tokenSalvo(); if (!t) { res.status(400).json({ error: "Conecte sua conta do GitHub primeiro." }); return; }
+  try {
+    const octokit = new Octokit({ auth: t });
+    const lista = await octokit.paginate(octokit.rest.repos.listForAuthenticatedUser, { per_page: 100, sort: "updated" });
+    res.json({ repos: lista.slice(0, 1000).map((r) => ({ nome: r.full_name, privado: r.private, atualizado: r.updated_at, ramo: r.default_branch, tamanhoKb: r.size, descricao: r.description || "" })) });
+  } catch (e: any) { res.status(400).json({ error: e?.message || "Falha ao listar repositórios" }); }
+});
+
+router.post("/github/enviar", async (req, res): Promise<void> => {
+  const t = await tokenSalvo(); if (!t) { res.status(400).json({ error: "Conecte sua conta do GitHub primeiro." }); return; }
+  const id = parseInt(String(req.body?.projectId), 10), alvo = String(req.body?.repo || "");
+  const mensagem = String(req.body?.mensagem || "").trim() || "Atualização pelo CodeLens " + new Date().toLocaleString("pt-BR");
+  const m = /^([\w.-]+)\/([\w.-]+)$/.exec(alvo);
+  if (isNaN(id) || !m) { res.status(400).json({ error: "Escolha o projeto e o repositório." }); return; }
+  const [project] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+  const [, owner, repo] = m, octokit = new Octokit({ auth: t });
+  try {
+    const { data: info } = await octokit.rest.repos.get({ owner, repo });
+    const ramo = String(req.body?.ramo || "").trim() || info.default_branch || "main";
+    const pai = async () => { try { const { data } = await octokit.rest.git.getRef({ owner, repo, ref: "heads/" + ramo }); return data.object.sha; } catch (e: any) { if (e?.status === 404 || e?.status === 409) return null; throw e; } };
+    let parent = await pai();
+    if (!parent) {
+      // repositório vazio: o GitHub exige um primeiro arquivo antes de aceitar o envio
+      await octokit.rest.repos.createOrUpdateFileContents({ owner, repo, path: "README.md", message: "Início", content: Buffer.from("# " + repo + "\n").toString("base64"), branch: ramo });
+      parent = await pai();
+    }
+    const files: FileToCommit[] = []; await collectAllFiles(project.storagePath, "", files);
+    const grandes = files.filter((f) => Buffer.byteLength(f.content, f.encoding === "base64" ? "base64" : "utf8") > 50 * 1024 * 1024).map((f) => f.path);
+    const enviar = files.filter((f) => !grandes.includes(f.path));
+    if (!enviar.length) { res.status(400).json({ error: "O projeto está vazio." }); return; }
+    const itens: Array<{ path: string; mode: "100644"; type: "blob"; sha: string }> = [];
+    for (let i = 0; i < enviar.length; i += 8) {
+      const lote = await Promise.all(enviar.slice(i, i + 8).map(async (f) => { const { data } = await octokit.rest.git.createBlob({ owner, repo, content: f.content, encoding: f.encoding }); return { path: f.path, mode: "100644" as const, type: "blob" as const, sha: data.sha }; }));
+      itens.push(...lote);
+    }
+    const { data: tree } = await octokit.rest.git.createTree({ owner, repo, tree: itens });
+    const { data: commit } = await octokit.rest.git.createCommit({ owner, repo, message: mensagem, tree: tree.sha, parents: parent ? [parent] : [] });
+    if (parent) await octokit.rest.git.updateRef({ owner, repo, ref: "heads/" + ramo, sha: commit.sha });
+    else await octokit.rest.git.createRef({ owner, repo, ref: "refs/heads/" + ramo, sha: commit.sha });
+    res.json({ ok: true, arquivos: itens.length, ignorados: grandes, url: `https://github.com/${owner}/${repo}/tree/${ramo}`, commit: commit.sha.slice(0, 7) });
+  } catch (e: any) {
+    const st = e?.status;
+    res.status(400).json({ error: st === 404 ? "Repositório não encontrado ou o token não tem acesso a ele." : st === 403 ? "O token não tem permissão de escrita (marque \"repo\" ao criar o token)." : (e?.message || "Falha ao enviar") });
+  }
+});
+
+export default router;
+===== FIM: server/routes/github.ts =====
+
+===== ARQUIVO: server/routes/health.ts =====
+import { Router, type IRouter } from "express";
+import { HealthCheckResponse } from "@workspace/api-zod";
+
+const router: IRouter = Router();
+
+router.get("/healthz", (_req, res) => {
+  const data = HealthCheckResponse.parse({ status: "ok" });
+  res.json(data);
+});
+
+export default router;
+===== FIM: server/routes/health.ts =====
+
+===== ARQUIVO: server/routes/import-github.ts =====
+import { Router, type IRouter } from "express";
+import { db, settingsTable, projectsTable } from "@workspace/db";
+import { ImportFromGithubBody } from "@workspace/api-zod";
+import {
+  ensureProjectDir,
+  deleteProjectDir,
+  countFiles,
+} from "../lib/storage.js";
+import { dbSaveDirectoryTree } from "../lib/persistFiles.js";
+import AdmZip from "adm-zip";
+import { randomUUID } from "crypto";
+import path from "path";
+import fs from "fs/promises";
+
+const router: IRouter = Router();
+
+function parseGithubUrl(url: string): { owner: string; repo: string } | null {
+  try {
+    const cleaned = url
+      .trim()
+      .replace(/\.git$/, "")
+      .replace(/\/$/, "");
+    const patterns = [
+      /^https?:\/\/github\.com\/([^/]+)\/([^/]+)$/,
+      /^github\.com\/([^/]+)\/([^/]+)$/,
+      /^([^/]+)\/([^/]+)$/,
+    ];
+    for (const pattern of patterns) {
+      const match = cleaned.match(pattern);
+      if (match) return { owner: match[1], repo: match[2] };
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+router.post("/projects/import-github", async (req, res): Promise<void> => {
+  const parsed = ImportFromGithubBody.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ error: parsed.error.message });
+    return;
+  }
+
+  const { repoUrl, branch } = parsed.data;
+
+  const repoInfo = parseGithubUrl(repoUrl);
+  if (!repoInfo) {
+    res.status(400).json({
+      error:
+        "Invalid GitHub URL. Use format: https://github.com/owner/repo",
+    });
+    return;
+  }
+
+  const { owner, repo } = repoInfo;
+
+  const settingsRows = await db.select().from(settingsTable).limit(1);
+  const settings = settingsRows[0];
+  const githubToken = settings?.githubToken ?? null;
+
+  const headers: Record<string, string> = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "User-Agent": "CodeLens-App",
+  };
+  if (githubToken) {
+    headers["Authorization"] = `Bearer ${githubToken}`;
+  }
+
+  let targetBranch = branch ?? null;
+
+  if (!targetBranch) {
+    const repoApiRes = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}`,
+      { headers }
+    );
+    if (!repoApiRes.ok) {
+      const err = await repoApiRes.text();
+      res.status(400).json({
+        error: `Could not access repository: ${repoApiRes.status} - ${err.slice(0, 200)}`,
+      });
+      return;
+    }
+    const repoData = (await repoApiRes.json()) as { default_branch?: string };
+    targetBranch = repoData.default_branch ?? "main";
+  }
+
+  const zipUrl = `https://api.github.com/repos/${owner}/${repo}/zipball/${targetBranch}`;
+
+  const zipRes = await fetch(zipUrl, { headers });
+  if (!zipRes.ok) {
+    res.status(400).json({
+      error: `Could not download repository ZIP: ${zipRes.status}. Make sure the repo is public or configure your GitHub token in Settings.`,
+    });
+    return;
+  }
+
+  const zipBuffer = Buffer.from(await zipRes.arrayBuffer());
+
+  const slug = randomUUID();
+  const projectDir = await ensureProjectDir(slug);
+
+  try {
+    const zip = new AdmZip(zipBuffer);
+    const entries = zip.getEntries();
+
+    const entryNames = entries.map((e) => e.entryName);
+    const firstPart = entryNames[0]?.split("/")[0] ?? "";
+    const allHaveSameRoot =
+      firstPart &&
+      entryNames.every((n) => n.startsWith(firstPart + "/") || n === firstPart);
+    const rootPrefix = allHaveSameRoot ? firstPart + "/" : "";
+
+    for (const entry of entries) {
+      if (entry.isDirectory) continue;
+
+      let entryName = entry.entryName;
+      if (rootPrefix && entryName.startsWith(rootPrefix)) {
+        entryName = entryName.slice(rootPrefix.length);
+      }
+
+      if (!entryName) continue;
+
+      const targetPath = path.join(projectDir, entryName);
+      const targetDir = path.dirname(targetPath);
+
+      const resolvedTarget = path.resolve(targetPath);
+      const resolvedBase = path.resolve(projectDir);
+      if (!resolvedTarget.startsWith(resolvedBase)) continue;
+
+      await fs.mkdir(targetDir, { recursive: true });
+      await fs.writeFile(targetPath, entry.getData());
+    }
+
+    const { count, sizeBytes } = await countFiles(projectDir);
+    const projectName = `${owner}/${repo}`;
+
+    const [inserted] = await db
+      .insert(projectsTable)
+      .values({
+        slug,
+        name: projectName,
+        storagePath: projectDir,
+        fileCount: count,
+        sizeBytes,
+      })
+      .returning();
+
+    // Persist files to DB for survival across restarts/redeploys
+    await dbSaveDirectoryTree(inserted.id, projectDir);
+
+    res.status(201).json({
+      id: String(inserted.id),
+      name: inserted.name,
+      createdAt: inserted.createdAt.toISOString(),
+      fileCount: inserted.fileCount,
+      sizeBytes: inserted.sizeBytes,
+    });
+  } catch (err) {
+    await deleteProjectDir(slug);
+    req.log.error({ err }, "Failed to import GitHub repo");
+    res.status(400).json({ error: "Failed to process repository files" });
+    return;
+  }
+});
+
+export default router;
+===== FIM: server/routes/import-github.ts =====
+
+===== ARQUIVO: server/routes/index.ts =====
+import { Router, type IRouter } from "express";
+import healthRouter from "./health";
+import projectsRouter from "./projects";
+import importGithubRouter from "./import-github";
+import filesRouter from "./files";
+import execRouter from "./exec";
+import aiRouter from "./ai";
+import githubRouter from "./github";
+import settingsRouter from "./settings";
+import previewRouter from "./preview";
+import devServerRouter from "./dev-server";
+import snippetsRouter from "./snippets";
+import codeRunRouter from "./code-run";
+import codeAssistantRouter from "./code-assistant";
+import gitRouter from "./git";
+
+const router: IRouter = Router();
+
+router.use(healthRouter);
+router.use(importGithubRouter);
+router.use(projectsRouter);
+router.use(filesRouter);
+router.use(execRouter);
+router.use(aiRouter);
+router.use(githubRouter);
+router.use(settingsRouter);
+router.use(previewRouter);
+router.use(devServerRouter);
+router.use(snippetsRouter);
+router.use(codeRunRouter);
+router.use(codeAssistantRouter);
+router.use(gitRouter);
+
+export default router;
+===== FIM: server/routes/index.ts =====
+
+===== ARQUIVO: server/routes/preview.ts =====
+import { Router, type IRouter } from "express";
+import { eq } from "drizzle-orm";
+import { db, projectsTable } from "@workspace/db";
+import path from "path";
+import fs from "fs/promises";
+import { createReadStream, existsSync } from "fs";
+import mime from "mime-types";
+
+const router: IRouter = Router();
+
+// Ordered list of directories/files to try as the entry point
+const ENTRY_CANDIDATES = [
+  "dist/index.html",
+  "build/index.html",
+  "out/index.html",
+  ".next/server/pages/index.html",
+  "public/index.html",
+  "static/index.html",
+  "www/index.html",
+  "index.html",
+  "src/index.html",
+];
+
+async function findEntryPoint(storagePath: string): Promise<string | null> {
+  for (const candidate of ENTRY_CANDIDATES) {
+    const fullPath = path.join(storagePath, candidate);
+    try {
+      await fs.stat(fullPath);
+      return candidate;
+    } catch {
+      // not found, try next
+    }
+  }
+  return null;
+}
+
+async function resolveProject(projectId: string) {
+  const id = parseInt(projectId, 10);
+  if (isNaN(id)) return null;
+  const [project] = await db.select().from(projectsTable).where(eq(projectsTable.id, id));
+  return project ?? null;
+}
+
+// GET /projects/:projectId/preview/status — what entry we'd serve
+router.get("/projects/:projectId/preview/status", async (req, res): Promise<void> => {
+  const project = await resolveProject(req.params.projectId);
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+
+  const entry = await findEntryPoint(project.storagePath);
+  if (entry) {
+    res.json({ ready: true, entry, storagePath: project.storagePath });
+  } else {
+    res.json({ ready: false, entry: null });
+  }
+});
+
+// GET /projects/:projectId/preview/*path — serve static files
+router.get("/projects/:projectId/preview{/*path}", async (req, res): Promise<void> => {
+  const project = await resolveProject(req.params.projectId);
+  if (!project) { res.status(404).json({ error: "Projeto não encontrado" }); return; }
+
+  // Express 5 wildcard /*path gives params.path as string[] (array of segments)
+  const rawPathParam = (req.params as any).path ?? "";
+  const rawPath = Array.isArray(rawPathParam) ? rawPathParam.join("/") : (rawPathParam as string);
+
+  // If no specific file requested, find and serve the index
+  let relativePath = rawPath || "";
+
+  if (!relativePath || relativePath === "/") {
+    const entry = await findEntryPoint(project.storagePath);
+    if (!entry) {
+      res.status(404).send(`
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head><meta charset="UTF-8"><title>Sem preview</title>
+        <style>body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;background:#0d1117;color:#8b949e;flex-direction:column;gap:12px}</style>
+        </head>
+        <body>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <p style="font-size:14px;margin:0">Nenhum arquivo <code>index.html</code> encontrado</p>
+          <p style="font-size:12px;margin:0">Para projetos React/Vite: rode <code>npm run build</code> primeiro</p>
+        </body>
+        </html>
+      `);
+      return;
+    }
+    relativePath = entry;
+  }
+
+  const fullPath = path.resolve(path.join(project.storagePath, relativePath));
+  const base = path.resolve(project.storagePath);
+
+  // Path traversal guard
+  if (!fullPath.startsWith(base)) {
+    res.status(400).send("Invalid path");
+    return;
+  }
+
+  try {
+    const stat = await fs.stat(fullPath);
+
+    // If directory, try index.html inside it
+    if (stat.isDirectory()) {
+      const indexPath = path.join(fullPath, "index.html");
+      try {
+        await fs.stat(indexPath);
+        const mimeType = "text/html";
+        res.setHeader("Content-Type", mimeType);
+        res.setHeader("X-Frame-Options", "SAMEORIGIN");
+        createReadStream(indexPath).pipe(res);
+      } catch {
+        res.status(404).send("Not found");
+      }
+      return;
+    }
+
+    const mimeType = mime.lookup(fullPath) || "application/octet-stream";
+    res.setHeader("Content-Type", mimeType);
+    res.setHeader("Cache-Control", "no-cache");
+    // Allow embedding in iframe from same origin
+    res.setHeader("X-Frame-Options", "SAMEORIGIN");
+    createReadStream(fullPath).pipe(res);
+  } catch {
+    // If file not found and path looks like a route (no extension), try index.html (SPA fallback)
+    const hasExtension = path.extname(relativePath).length > 0;
+    if (!hasExtension) {
+      const entry = await findEntryPoint(project.storagePath);
+      if (entry) {
+        const entryFull = path.join(project.storagePath, entry);
+        res.setHeader("Content-Type", "text/html");
+        res.setHeader("Cache-Control", "no-cache");
+        createReadStream(entryFull).pipe(res);
+        return;
+      }
+    }
+    res.status(404).send("Not found");
+  }
+});
+
+export default router;
+===== FIM: server/routes/preview.ts =====
+
+===== ARQUIVO: server/routes/projects.ts =====
+import { Router, type IRouter } from "express";
+import { eq } from "drizzle-orm";
+import { db, projectsTable } from "@workspace/db";
+import {
+  ListProjectsResponse,
+  GetProjectParams,
+  GetProjectResponse,
+  DeleteProjectParams,
+} from "@workspace/api-zod";
+import {
+  ensureProjectDir,
+  deleteProjectDir,
+  buildFileTree,
+  countFiles,
+} from "../lib/storage.js";
+import { dbSaveDirectoryTree, ensureProjectOnDisk, dbDeleteAllFiles } from "../lib/persistFiles.js";
+import multer from "multer";
+import AdmZip from "adm-zip";
+import { ehTarOuGz, lerTar } from "../lib/tar.js";
+import { randomUUID } from "crypto";
+import path from "path";
+import fs from "fs/promises";
+
+// arquivo grande vai direto para o disco (não enche a memória); limite de 4 GB
+const upload = multer({ storage: multer.diskStorage({}), limits: { fileSize: 4 * 1024 * 1024 * 1024 } });
+
+const router: IRouter = Router();
+
+router.get("/projects", async (req, res): Promise<void> => {
+  const rows = await db
+    .select()
+    .from(projectsTable)
+    .orderBy(projectsTable.createdAt);
+
+  res.json(
+    ListProjectsResponse.parse(
+      rows.map((r) => ({
+        id: String(r.id),
+        name: r.name,
+        createdAt: r.createdAt.toISOString(),
+        fileCount: r.fileCount,
+        sizeBytes: r.sizeBytes,
+      }))
+    )
+  );
+});
+
+router.post(
+  "/projects",
+  upload.single("file"),
+  async (req, res): Promise<void> => {
+    const file = req.file;
+    if (!file) {
+      res.status(400).json({ error: "No file uploaded" });
+      return;
+    }
+
+    const cabeca = Buffer.alloc(512); { const fh = await fs.open(file.path, "r"); try { await fh.read(cabeca, 0, 512, 0); } finally { await fh.close(); } }
+    const ehZip = /\.zip$/i.test(file.originalname) || (cabeca[0] === 0x50 && cabeca[1] === 0x4b);
+    const ehTar = !ehZip && ehTarOuGz(file.originalname, cabeca);
+    if (!ehZip && !ehTar) {
+      fs.unlink(file.path).catch(() => {});
+      res.status(400).json({ error: "Envie um arquivo .zip, .tar, .tar.gz ou .tgz" });
+      return;
+    }
+
+    const name =
+      (req.body.name as string) ||
+      file.originalname.replace(/\.(zip|tgz|tar\.gz|tar|gz)$/i, "") ||
+      "untitled";
+    const slug = `${randomUUID()}`;
+
+    const projectDir = await ensureProjectDir(slug);
+
+    try {
+      // .zip ou .tar/.tar.gz/.tgz (exports antigos da Replit) viram a mesma lista
+      const entries: Array<{ entryName: string; isDirectory: boolean; getData: () => Buffer }> = ehZip
+        ? new AdmZip(file.path).getEntries()
+        : lerTar(await fs.readFile(file.path)).map((e) => ({ entryName: e.nome, isDirectory: false, getData: () => e.dados }));
+
+      // Detect if all entries share a single root folder (e.g. GitHub ZIPs: repo-main/)
+      const entryNames = entries.map((e) => e.entryName);
+      const firstPart = entryNames[0]?.split("/")[0] ?? "";
+      const allHaveSameRoot =
+        firstPart.length > 0 &&
+        entryNames.every((n) => n.startsWith(firstPart + "/") || n === firstPart);
+      const rootPrefix = allHaveSameRoot ? firstPart + "/" : "";
+
+      for (const entry of entries) {
+        if (entry.isDirectory) continue;
+
+        let entryName = entry.entryName;
+        if (rootPrefix && entryName.startsWith(rootPrefix)) {
+          entryName = entryName.slice(rootPrefix.length);
+        }
+
+        if (!entryName) continue;
+
+        const targetPath = path.join(projectDir, entryName);
+        const resolvedTarget = path.resolve(targetPath);
+        const resolvedBase = path.resolve(projectDir);
+        if (!resolvedTarget.startsWith(resolvedBase)) continue;
+
+        const targetDir = path.dirname(targetPath);
+        await fs.mkdir(targetDir, { recursive: true });
+        await fs.writeFile(targetPath, entry.getData());
+      }
+
+      const { count, sizeBytes } = await countFiles(projectDir);
+
+      const [inserted] = await db
+        .insert(projectsTable)
+        .values({
+          slug,
+          name,
+          storagePath: projectDir,
+          fileCount: count,
+          sizeBytes,
+        })
+        .returning();
+
+      // Persist files to DB for survival across restarts
+      await dbSaveDirectoryTree(inserted.id, projectDir);
+
+      res.status(201).json({
+        id: String(inserted.id),
+        name: inserted.name,
+        createdAt: inserted.createdAt.toISOString(),
+        fileCount: inserted.fileCount,
+        sizeBytes: inserted.sizeBytes,
+      });
+      fs.unlink(file.path).catch(() => {});
+    } catch (err) {
+      fs.unlink(file.path).catch(() => {});
+      await deleteProjectDir(slug);
+      req.log.error({ err }, "Failed to extract archive");
+      res.status(400).json({ error: "Não consegui abrir o arquivo (" + ((err as Error)?.message || "formato inválido") + ")" });
+      return;
+    }
+  }
+);
+
+// ─── POST /projects/blank — create a blank project from template ─────────────
+
+const TEMPLATES: Record<string, Array<{ file: string; content: string }>> = {
+  blank: [
+    { file: "README.md", content: "# Novo Projeto\n\nDescreva seu projeto aqui.\n" },
+  ],
+  html: [
+    {
+      file: "index.html",
+      content: `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Projeto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Olá, mundo!</h1>
+  <p>Edite este arquivo para começar.</p>
+  <script src="script.js"></script>
+</body>
+</html>
+`,
+    },
+    {
+      file: "style.css",
+      content: `* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; padding: 2rem; background: #f9f9f9; color: #333; }
+h1 { margin-bottom: 1rem; color: #1a73e8; }
+`,
+    },
+    {
+      file: "script.js",
+      content: `// Seu código JavaScript aqui
+console.log('Projeto iniciado!');
+`,
+    },
+  ],
+  node: [
+    {
+      file: "server.js",
+      content: `const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+  res.end(\`<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Servidor Node.js</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; background: #0d1117; color: #e6edf3; max-width: 600px; margin: 0 auto; }
+    h1 { color: #58a6ff; margin-bottom: 0.5rem; }
+    p { color: #8b949e; line-height: 1.6; }
+    code { background: #161b22; padding: 0.2em 0.5em; border-radius: 4px; color: #79c0ff; font-size: 0.9em; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem; margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>✅ Servidor Node.js rodando!</h1>
+  <p>Servidor HTTP puro — sem dependências externas.</p>
+  <div class="card">
+    <p>URL acessada: <code>\${req.url}</code></p>
+    <p>Hora: <code>\${new Date().toLocaleString('pt-BR')}</code></p>
+  </div>
+  <p style="margin-top:1.5rem">Edite <code>server.js</code> para personalizar o servidor.</p>
+</body>
+</html>\`);
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(\`Servidor rodando em http://localhost:\${PORT}\`);
+});
+`,
+    },
+    {
+      file: "package.json",
+      content: JSON.stringify(
+        { name: "meu-servidor", version: "1.0.0", main: "server.js", scripts: { start: "node server.js", dev: "node server.js" } },
+        null,
+        2
+      ) + "\n",
+    },
+    { file: "README.md", content: "# Servidor Node.js\n\nServidor HTTP sem dependências externas.\n\n```bash\nnode server.js\n```\n\nOu pelo preview: clique em **Iniciar Servidor**.\n" },
+  ],
+  express: [
+    {
+      file: "server.js",
+      content: `const express = require('express');
+const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Página inicial
+app.get('/', (req, res) => {
+  res.send(\`<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express App</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; background: #0d1117; color: #e6edf3; max-width: 700px; margin: 0 auto; }
+    h1 { color: #58a6ff; }
+    p { color: #8b949e; line-height: 1.6; }
+    .btn { display: inline-block; background: #238636; color: #fff; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; margin-top: 1rem; cursor: pointer; border: none; font-size: 1rem; }
+    .btn:hover { background: #2ea043; }
+    .output { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem; margin-top: 1rem; color: #79c0ff; min-height: 2rem; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 4px; color: #79c0ff; }
+  </style>
+</head>
+<body>
+  <h1>🚀 Express funcionando!</h1>
+  <p>Servidor Express rodando. Edite <code>server.js</code> para adicionar rotas.</p>
+  <button class="btn" onclick="testar()">Testar API</button>
+  <div class="output" id="out">Clique no botão para testar a API...</div>
+  <script>
+    async function testar() {
+      const r = await fetch('/api/hello');
+      const d = await r.json();
+      document.getElementById('out').textContent = JSON.stringify(d, null, 2);
+    }
+  </script>
+</body>
+</html>\`);
+});
+
+// API de exemplo
+app.get('/api/hello', (req, res) => {
+  res.json({
+    mensagem: 'Olá do servidor Express!',
+    hora: new Date().toLocaleString('pt-BR'),
+    status: 'ok'
+  });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(\`Express rodando em http://localhost:\${PORT}\`);
+});
+`,
+    },
+    {
+      file: "package.json",
+      content: JSON.stringify(
+        {
+          name: "express-app",
+          version: "1.0.0",
+          main: "server.js",
+          scripts: { start: "node server.js", dev: "node server.js" },
+          dependencies: { express: "^4.18.2" },
+        },
+        null,
+        2
+      ) + "\n",
+    },
+    { file: "README.md", content: "# Express App\n\n```bash\nnpm install\nnode server.js\n```\n\nOu pelo preview: **npm install** no terminal, depois clique em **Iniciar Servidor**.\n" },
+  ],
+  react: [
+    {
+      file: "index.html",
+      content: `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React App</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
+`,
+    },
+    {
+      file: "package.json",
+      content: JSON.stringify(
+        {
+          name: "react-app",
+          version: "0.0.0",
+          private: true,
+          scripts: { dev: "vite", build: "vite build", preview: "vite preview" },
+          dependencies: { react: "^18.3.0", "react-dom": "^18.3.0" },
+          devDependencies: { "@vitejs/plugin-react": "^4.3.0", vite: "^6.0.0" },
+        },
+        null,
+        2
+      ) + "\n",
+    },
+    {
+      file: "vite.config.js",
+      content: `import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+export default defineConfig({ plugins: [react()] })
+`,
+    },
+    {
+      file: "src/main.jsx",
+      content: `import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+`,
+    },
+    {
+      file: "src/App.jsx",
+      content: `import React, { useState } from 'react'
+
+export default function App() {
+  const [count, setCount] = useState(0)
+  return (
+    <div style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
+      <h1>React App</h1>
+      <p>Contador: {count}</p>
+      <button onClick={() => setCount(c => c + 1)}>+1</button>
+    </div>
+  )
+}
+`,
+    },
+    { file: "README.md", content: "# React App\n\n```bash\nnpm install\nnpm run dev\n```\n" },
+  ],
+};
+
+router.post("/projects/blank", async (req, res): Promise<void> => {
+  const { name, template = "blank" } = req.body as { name?: string; template?: string };
+  const projectName = (name ?? "Novo Projeto").trim() || "Novo Projeto";
+  const files = TEMPLATES[template] ?? TEMPLATES.blank;
+  const slug = randomUUID();
+  const projectDir = await ensureProjectDir(slug);
+
+  for (const { file, content } of files) {
+    const fullPath = path.join(projectDir, file);
+    await fs.mkdir(path.dirname(fullPath), { recursive: true });
+    await fs.writeFile(fullPath, content, "utf-8");
+  }
+
+  const { count, sizeBytes } = await countFiles(projectDir);
+  const [inserted] = await db
+    .insert(projectsTable)
+    .values({ slug, name: projectName, storagePath: projectDir, fileCount: count, sizeBytes })
+    .returning();
+
+  // Persist template files to DB for survival across restarts
+  await dbSaveDirectoryTree(inserted.id, projectDir);
+
+  res.status(201).json({
+    id: String(inserted.id),
+    name: inserted.name,
+    createdAt: inserted.createdAt.toISOString(),
+    fileCount: inserted.fileCount,
+    sizeBytes: inserted.sizeBytes,
+  });
+});
+
+router.get("/projects/:projectId", async (req, res): Promise<void> => {
+  const raw = Array.isArray(req.params.projectId) ? req.params.projectId[0] : req.params.projectId;
+  const id = parseInt(raw, 10);
+  if (isNaN(id)) {
+    res.status(400).json({ error: "Invalid project ID" });
+    return;
+  }
+
+  const params = GetProjectParams.safeParse({ projectId: raw });
+  if (!params.success) {
+    res.status(400).json({ error: params.error.message });
+    return;
+  }
+
+  const [project] = await db
+    .select()
+    .from(projectsTable)
+    .where(eq(projectsTable.id, id));
+
+  if (!project) {
+    res.status(404).json({ error: "Project not found" });
+    return;
+  }
+
+  // Restore from DB if /tmp was wiped (after server restart/redeploy)
+  await ensureProjectOnDisk(project.id, project.storagePath);
+
+  const tree = await buildFileTree(project.storagePath);
+
+  res.json(
+    GetProjectResponse.parse({
+      id: String(project.id),
+      name: project.name,
+      createdAt: project.createdAt.toISOString(),
+      fileCount: project.fileCount,
+      sizeBytes: project.sizeBytes,
+      tree: { ...tree, name: project.name, path: "" },
+    })
+  );
+});
+
+router.get("/projects/:projectId/download", async (req, res): Promise<void> => {
+  const raw = Array.isArray(req.params.projectId) ? req.params.projectId[0] : req.params.projectId;
+  const id = parseInt(raw, 10);
+  if (isNaN(id)) {
+    res.status(400).json({ error: "Invalid project ID" });
+    return;
+  }
+
+  const [project] = await db
+    .select()
+    .from(projectsTable)
+    .where(eq(projectsTable.id, id));
+
+  if (!project) {
+    res.status(404).json({ error: "Project not found" });
+    return;
+  }
+
+  await ensureProjectOnDisk(project.id, project.storagePath);
+
+  try {
+    const zip = new AdmZip();
+    const skip = new Set(["node_modules", ".git", "dist", "build", ".next", ".cache", "coverage"]);
+
+    async function addDirectory(dir: string, relative = ""): Promise<void> {
+      const entries = await fs.readdir(dir, { withFileTypes: true });
+      for (const entry of entries) {
+        if (entry.name.startsWith(".") || skip.has(entry.name)) continue;
+        const fullPath = path.join(dir, entry.name);
+        const archivePath = relative ? `${relative}/${entry.name}` : entry.name;
+        if (entry.isDirectory()) {
+          await addDirectory(fullPath, archivePath);
+        } else {
+          zip.addLocalFile(fullPath, relative || undefined, entry.name);
+        }
+      }
+    }
+
+    await addDirectory(project.storagePath);
+    const buffer = zip.toBuffer();
+    const safeName = project.name.replace(/[^a-z0-9-_]+/gi, "-").replace(/^-+|-+$/g, "") || "projeto";
+    res.setHeader("Content-Type", "application/zip");
+    res.setHeader("Content-Disposition", `attachment; filename="${safeName}.zip"`);
+    res.setHeader("Content-Length", buffer.length);
+    res.send(buffer);
+  } catch (err) {
+    req.log.error({ err }, "Failed to create project download");
+    res.status(500).json({ error: "Failed to create project ZIP" });
+  }
+});
+
+router.delete("/projects/:projectId", async (req, res): Promise<void> => {
+  const raw = Array.isArray(req.params.projectId) ? req.params.projectId[0] : req.params.projectId;
+  const id = parseInt(raw, 10);
+  if (isNaN(id)) {
+    res.status(400).json({ error: "Invalid project ID" });
+    return;
+  }
+
+  const params = DeleteProjectParams.safeParse({ projectId: raw });
+  if (!params.success) {
+    res.status(400).json({ error: params.error.message });
+    return;
+  }
+
+  const [project] = await db
+    .select()
+    .from(projectsTable)
+    .where(eq(projectsTable.id, id));
+
+  if (!project) {
+    res.status(404).json({ error: "Project not found" });
+    return;
+  }
+
+  await deleteProjectDir(project.slug);
+  await db.delete(projectsTable).where(eq(projectsTable.id, id));
+
+  res.sendStatus(204);
+});
+
+export default router;
+===== FIM: server/routes/projects.ts =====
+
+===== ARQUIVO: server/routes/settings.ts =====
+import { Router, type IRouter } from "express";
+import { eq } from "drizzle-orm";
+import { db, settingsTable } from "@workspace/db";
+import {
+  UpdateSettingsBody,
+  UpdateSettingsResponse,
+  GetSettingsResponse,
+} from "@workspace/api-zod";
+
+const router: IRouter = Router();
+
+router.get("/settings", async (req, res): Promise<void> => {
+  const rows = await db.select().from(settingsTable).limit(1);
+  const row = rows[0];
+
+  if (!row) {
+    res.json(GetSettingsResponse.parse({
+      aiApiKeySet: false,
+      aiBaseUrl: null,
+      aiModel: null,
+      githubTokenSet: false,
+    }));
+    return;
+  }
+
+  res.json(GetSettingsResponse.parse({
+    aiApiKeySet: !!row.aiApiKey,
+    aiBaseUrl: row.aiBaseUrl ?? null,
+    aiModel: row.aiModel ?? null,
+    githubTokenSet: !!row.githubToken,
+  }));
+});
+
+router.put("/settings", async (req, res): Promise<void> => {
+  const parsed = UpdateSettingsBody.safeParse(req.body);
+  if (!parsed.success) {
+    res.status(400).json({ error: parsed.error.message });
+    return;
+  }
+
+  const { aiApiKey, aiBaseUrl, aiModel, githubToken } = parsed.data;
+
+  const rows = await db.select().from(settingsTable).limit(1);
+  const existing = rows[0];
+
+  const updateData: Record<string, string | null | Date> = {
+    updatedAt: new Date(),
+  };
+
+  if (aiBaseUrl !== undefined) updateData.aiBaseUrl = aiBaseUrl?.trim() || null;
+  if (aiModel !== undefined) updateData.aiModel = aiModel?.trim() || null;
+  if (aiApiKey !== undefined) updateData.aiApiKey = aiApiKey?.trim() || null;
+  if (githubToken !== undefined) updateData.githubToken = githubToken?.trim() || null;
+
+  if (existing) {
+    await db.update(settingsTable).set(updateData).where(eq(settingsTable.id, existing.id));
+  } else {
+    await db.insert(settingsTable).values({
+      aiApiKey: aiApiKey ?? null,
+      aiBaseUrl: aiBaseUrl ?? null,
+      aiModel: aiModel ?? null,
+      githubToken: githubToken ?? null,
+    });
+  }
+
+  const updated = await db.select().from(settingsTable).limit(1);
+  const row = updated[0];
+
+  res.json(UpdateSettingsResponse.parse({
+    aiApiKeySet: !!row?.aiApiKey,
+    aiBaseUrl: row?.aiBaseUrl ?? null,
+    aiModel: row?.aiModel ?? null,
+    githubTokenSet: !!row?.githubToken,
+  }));
+});
+
+export default router;
+===== FIM: server/routes/settings.ts =====
+
+===== ARQUIVO: server/routes/snippets.ts =====
+import { Router, type IRouter } from "express";
+import { desc, eq } from "drizzle-orm";
+import { db, snippetsTable } from "@workspace/db";
+
+const router: IRouter = Router();
+
+// List all snippets (most recent first)
+router.get("/snippets", async (_req, res): Promise<void> => {
+  try {
+    const rows = await db.select().from(snippetsTable).orderBy(desc(snippetsTable.createdAt));
+    res.json(rows.map((r) => ({ ...r, id: String(r.id) })));
+  } catch (err) {
+    res.status(500).json({ error: "Erro ao buscar snippets" });
+  }
+});
+
+// Create snippet
+router.post("/snippets", async (req, res): Promise<void> => {
+  try {
+    const { title = "Sem título", html = "", css = "", js = "", mode = "html" } = req.body;
+    const [row] = await db
+      .insert(snippetsTable)
+      .values({ title, html, css, js, mode })
+      .returning();
+    res.json({ ...row, id: String(row.id) });
+  } catch (err) {
+    res.status(500).json({ error: "Erro ao salvar snippet" });
+  }
+});
+
+// Rename snippet
+router.patch("/snippets/:id", async (req, res): Promise<void> => {
+  try {
+    const id = parseInt(req.params.id, 10);
+    const { title } = req.body;
+    if (!title?.trim()) {
+      res.status(400).json({ error: "Título não pode ser vazio" });
+      return;
+    }
+    const [row] = await db
+      .update(snippetsTable)
+      .set({ title: title.trim() })
+      .where(eq(snippetsTable.id, id))
+      .returning();
+    if (!row) {
+      res.status(404).json({ error: "Snippet não encontrado" });
+      return;
+    }
+    res.json({ ...row, id: String(row.id) });
+  } catch (err) {
+    res.status(500).json({ error: "Erro ao renomear snippet" });
+  }
+});
+
+// Delete snippet
+router.delete("/snippets/:id", async (req, res): Promise<void> => {
+  try {
+    const id = parseInt(req.params.id, 10);
+    await db.delete(snippetsTable).where(eq(snippetsTable.id, id));
+    res.status(204).end();
+  } catch (err) {
+    res.status(500).json({ error: "Erro ao excluir snippet" });
+  }
+});
+
+export default router;
+===== FIM: server/routes/snippets.ts =====
+
+===== ARQUIVO: src/App.tsx =====
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Router as WouterRouter, Route, Switch } from 'wouter';
+import { ErrorBoundary } from '@/components/error-boundary';
+import { Toaster } from '@/components/ui/toaster';
+import { ThemeProvider } from '@/components/theme-provider';
+
+import Home from '@/pages/home';
+import ProjectExplorer from '@/pages/project-explorer';
+import Settings from '@/pages/settings';
+import PlaygroundPage from '@/pages/playground';
+import AssistantPage from '@/pages/assistant';
+import NotFound from '@/pages/not-found';
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: { retry: 1, staleTime: 30_000 },
+  },
+});
+
+const base = (import.meta.env.BASE_URL ?? '/').replace(/\/$/, '');
+
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <ThemeProvider defaultTheme="dark" storageKey="codelens-theme">
+        <QueryClientProvider client={queryClient}>
+          <WouterRouter base={base}>
+            <Switch>
+              <Route path="/" component={Home} />
+              <Route path="/projects/:id" component={ProjectExplorer} />
+              <Route path="/settings" component={Settings} />
+              <Route path="/playground" component={PlaygroundPage} />
+              <Route path="/assistant" component={AssistantPage} />
+              <Route component={NotFound} />
+            </Switch>
+          </WouterRouter>
+          <Toaster />
+        </QueryClientProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
+  );
+}
+===== FIM: src/App.tsx =====
+
+===== ARQUIVO: src/main.tsx =====
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
+
+createRoot(document.getElementById("root")!).render(<App />);
+
+if ("serviceWorker" in navigator && import.meta.env.PROD) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
+  });
+}
+===== FIM: src/main.tsx =====
+
+===== ARQUIVO: tsconfig.json =====
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": false,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["node", "vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@workspace/db": ["lib/db/index.ts"],
+      "@workspace/api-zod": ["lib/api-zod/index.ts"],
+      "@workspace/api-client-react": ["lib/api-client-react/index.ts"]
+    }
+  },
+  "include": ["src", "server", "lib", "vite.config.ts", "scripts"]
+}
+===== FIM: tsconfig.json =====
+
+===== ARQUIVO: vite.config.ts =====
+// Receita da TELA (vite). Antes, a da Replit desligava sozinha sem PORT e
+// BASE_PATH e trazia 3 plugins da Replit. Esta não precisa de nada disso.
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import path from "path";
+
+const SERVIDOR = `http://localhost:${process.env.PORT || 8080}`;
+
+export default defineConfig({
+  base: "/",
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+      "@workspace/api-client-react": path.resolve(__dirname, "lib/api-client-react/index.ts"),
+    },
+  },
+  build: { outDir: "dist", emptyOutDir: true, chunkSizeWarningLimit: 4000 },
+  server: {
+    port: 5173,
+    host: true,
+    // O "carteiro": tudo que começa com /api vai para o servidor
+    proxy: { "/api": { target: SERVIDOR, changeOrigin: true } },
+  },
+});
+===== FIM: vite.config.ts =====
+
